@@ -913,7 +913,6 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-cell-checkbox .form-checkbox span {padding:0 0 0 20px}
 .manager-table-cell-checkbox .form-checkbox span::before {top:-1px}
 .manager-table-cell-section {font-size:14px; line-height:21px}
-.manager-table-cell-section img {vertical-align:middle; margin:-2px 10px 0 0}
 .manager-table-cell-date {font-size:14px; line-height:21px}
 .manager-table-timeslot {font-size:0; line-height:0; letter-spacing:-1px; margin:-3px 0 0 0}
 .manager-table-timeslot-time {display:inline-block; vertical-align:top; width:52px; height:26px; border-radius:2px; background:#fef6d3; text-align:center; color:#313131; font-weight:normal; font-size:14px; line-height:26px; letter-spacing:0}
@@ -933,8 +932,12 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-cell-category img:first-child {margin-left:0}
 .manager-table-company-name {margin:-1px 0 0 0; font-size:15px; line-height:22px; font-weight:normal; position:relative; margin:0 0 0 13px}
 .manager-table-company-name::before {content:""; display:block; position:absolute; left:-13px; top:-1px; width:5px; height:20px}
-.manager-table-cell-company-type-1 .manager-table-company-name::before {background:#ffcccc}
-.manager-table-cell-company-type-2 .manager-table-company-name::before {background:#ade491}
+.manager-table-cell-company-type-1 .manager-table-company-name::before {background:#dedede}
+.manager-table-cell-company-type-2 .manager-table-company-name::before {background:#fce480}
+.manager-table-cell-company-type-3 .manager-table-company-name::before {background:#ade491}
+.manager-table-cell-company-type-4 .manager-table-company-name::before {background:#ff9c9c}
+.manager-table-cell-company-type-5 .manager-table-company-name::before {background:#38a9db}
+.manager-table-cell-company-type-6 .manager-table-company-name::before {background:#ffccfa}
 .manager-table-company-name a {text-decoration:none}
 .manager-table-company-name a:hover {color:#666}
 .manager-table-company-name span {display:inline-block; vertical-align:top; max-width:158px; position:relative; overflow:hidden; text-overflow:ellipsis}
@@ -942,10 +945,6 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-company-name path {stroke:#bdbdbd; transition:all 0.2s}
 .manager-table-company-name a:hover path {stroke:#000}
 .manager-table-company-text {font-size:13px; line-height:21px; margin:0 0 0 13px; color:#666}
-.manager-table-cell-delegate-new {position:relative; padding-left:62px}
-.manager-table-delegate-letter {position:absolute; left:30px; top:16px; width:24px; height:24px; text-align:center; line-height:26px; color:#fffdfd; font-size:14px; font-weight:800; border-radius:50%}
-.manager-table-delegate-letter-1 {background:#ff9c9c}
-.manager-table-delegate-letter-2 {background:#38a9db}
 .manager-table-delegate-name {font-weight:normal; font-size:15px; line-height:22px; margin:-1px 0 0 0}
 .manager-table-delegate-phone {font-size:13px; line-height:21px; color:#666}
 .manager-table-cell-city {font-size:14px; line-height:21px}
@@ -954,12 +953,6 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-cell-action a:first-child {margin-left:0}
 .manager-table-cell-action a:hover {background:#2e9ecf}
 .manager-table-cell-action a img {vertical-align:middle}
-.manager-table-cell-action a.manager-table-action-confirm-quest {background:#eaeaea}
-.manager-table-cell-action a.manager-table-action-confirm-quest:hover {background:#eaeaea}
-.manager-table-cell-action a.manager-table-action-confirm-dashboard {background:#d0f6b8}
-.manager-table-cell-action a.manager-table-action-confirm-dashboard:hover {background:#bcec9d}
-.manager-table-cell-action a.manager-table-action-delete-dashboard {background:#ff7a7a}
-.manager-table-cell-action a.manager-table-action-delete-dashboard:hover {background:#ef5656}
 .manager-table-cell-fixed {visibility:hidden}
 .manager-table-comment {max-width:413px; position:relative; overflow:hidden; text-overflow:ellipsis}
 .manager-table-cell-meets {text-align:center; font-size:13px; line-height:23px}
@@ -968,9 +961,12 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-section {display:inline-block; vertical-align:top; margin:-2px 0 0 10px}
 .manager-table-section:first-child {margin-left:0}
 .manager-table-section-icon {width:24px; height:24px; cursor:pointer}
-.manager-table-section-icon-1 {background:#ffcccc}
-.manager-table-section-icon-2 {background:#ade491}
-.manager-table-section-icon-3 {background:#ececec}
+.manager-table-section-icon-1 {background:#dedede}
+.manager-table-section-icon-2 {background:#fce480}
+.manager-table-section-icon-3 {background:#ade491}
+.manager-table-section-icon-4 {background:#ff9c9c}
+.manager-table-section-icon-5 {background:#38a9db}
+.manager-table-section-icon-6 {background:#ffccfa}
 .manager-table-section-detail {display:none}
 .manager-table-section-detail-title {text-transform:uppercase; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.05em; color:#898989}
 .manager-table-section-detail-name {font-weight:normal; font-size:16px; line-height:24px; letter-spacing:0; color:#171717}
@@ -1066,15 +1062,15 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-arrow-right.visible {display:block}
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right,
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right.visible {display:none}
-.manager-table-arrow-right-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(0, 140, 201, 0.3) url(../images/pager-next.svg) no-repeat center; position:absolute; right:20px; top:0; margin-top:86px; transition:background-color 0.2s}
-.manager-table-arrow-right:hover .manager-table-arrow-right-inner {background-color:rgba(0, 140, 201, 1)}
+.manager-table-arrow-right-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-next.svg) no-repeat center; position:absolute; right:20px; top:0; margin-top:86px; transition:background-color 0.2s}
+.manager-table-arrow-right:hover .manager-table-arrow-right-inner {background-color:rgba(252, 228, 128, 1)}
 
 .manager-table-arrow-left {position:absolute; display:none; left:0; top:0; bottom:47px; width:147px; background:linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%)}
 .manager-table-arrow-left.visible {display:block}
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right+.manager-table-arrow-left,
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right+.manager-table-arrow-left.visible {display:none}
-.manager-table-arrow-left-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(0, 140, 201, 0.3) url(../images/pager-prev.svg) no-repeat center; position:absolute; left:20px; top:0; margin-top:86px; transition:background-color 0.2s}
-.manager-table-arrow-left:hover .manager-table-arrow-left-inner {background-color:rgba(0, 140, 201, 1)}
+.manager-table-arrow-left-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-prev.svg) no-repeat center; position:absolute; left:20px; top:0; margin-top:86px; transition:background-color 0.2s}
+.manager-table-arrow-left:hover .manager-table-arrow-left-inner {background-color:rgba(252, 228, 128, 1)}
 
 .manager-table-head-active+.manager-table-head {padding-left:12px}
 .manager-table-cell-active {width:26px}
@@ -1432,43 +1428,3 @@ h1+.meet-card-btns {margin-top:16px}
 .window-online-time-error {font-weight:500; font-size:14px; line-height:21px; display:none; color:#df0e0e}
 .fonts-loaded .window-online-time-error {font-family:Lato, sans-serif}
 .window-online-time-error.visible {display:inline}
-
-.dashboard-header {margin:41px 0 18px 0}
-.dashboard-header::after {content:""; display:block; clear:both}
-.dashboard-header h1 {float:left; margin:0}
-.dashboard-header-btns {float:right; margin:2px 0 0 0}
-.dashboard-header-btn {float:left; margin:0 0 0 17px}
-.dashboard-header-btn:first-child {margin:0}
-.dashboard-header-btn .btn {padding:0 20px}
-.dashboard-header-btn img {vertical-align:middle; margin:-2px 9px 0 0}
-
-@media screen and (max-width:1169px) {
-    .dashboard-header {margin:84px 0 5px 0}
-    .dashboard-header h1 {float:none}
-    .dashboard-header-btns {float:none; margin:25px 0 0 0}
-    .dashboard-header-btn {margin:0 0 0 30px}
-    .dashboard-header-btn:first-child {margin:0}
-    .dashboard-header-btn .btn {height:53px; line-height:53px; font-size:17px}
-    .dashboard-header-btn .btn-mini::after {display:none}
-    .dashboard-header-btn-add .btn {width:53px; padding:0; font-size:0; line-height:53px; letter-spacing:-1px}
-    .dashboard-header-btn-add .btn img {margin:0; width:30px; height:30px}
-}
-
-.dashboard-summ {margin:33px 0 0 -40px}
-.dashboard-summ::after {content:""; display:block; clear:both}
-.dashboard-summ-group {float:left; margin:0 0 39px 40px}
-.dashboard-summ-group-title {font-weight:600; font-size:18px; line-height:27px; margin:0 0 13px 0}
-.dashboard-summ-group-title span {font-size:16px; font-weight:300}
-.dashboard-summ-group-list {margin:0 0 0 -20px}
-.dashboard-summ-group-item {float:left; margin:0 0 0 20px}
-.dashboard-summ-item-inner {display:block; position:relative; width:147px; text-decoration:none; border:1px solid #e2e2e2; padding:9px 0 9px 20px; background:#fff}
-.dashboard-summ-item-inner::before {content:""; display:block; position:absolute; right:-11px; bottom:-11px; width:100%; height:100%; border-right:10px solid #cce8f4; border-bottom:10px solid #cce8f4; pointer-events:none; transition:all 0.2s; z-index:-1}
-.dashboard-summ-item-inner:hover::before {right:0; bottom:0}
-.dashboard-summ-item-inner::after {content:""; display:block; position:absolute; right:-1px; bottom:-1px; left:-1px; top:-1px; border:4px solid #008cc9; pointer-events:none; transition:all 0.2s; opacity:0}
-.dashboard-summ-item-inner:hover::after {opacity:1}
-.dashboard-summ-item-value {font-weight:600; font-size:30px; line-height:45px; color:#171717}
-.dashboard-summ-item-value span {display:inline-block; vertical-align:top; margin-top:4px; font-size:24px; line-height:36px; color:#989898; font-weight:300}
-.fonts-loaded .dashboard-summ-item-value {font-family:FiraSans, sans-serif}
-.dashboard-summ-item-text {padding:0 0 10px 0; font-size:14px; line-height:18px; color:#403f3f}
-
-.tabs-content-inner > .manager-table-container-dashboard-feedback:first-child {margin-top:40px}
