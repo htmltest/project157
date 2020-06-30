@@ -280,6 +280,12 @@ $(document).ready(function() {
     $('body').on('click', '.manager-table-filter-params-window-title', function(e) {
         $(this).parent().toggleClass('open');
     });
+    
+    $('.support-open-form a').click(function(e) {
+        $('.support-form').addClass('visible');
+        $('.support-open-form').hide();
+        e.preventDefault();
+    });
 
 });
 

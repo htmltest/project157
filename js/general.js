@@ -893,6 +893,8 @@ function windowOpen(linkWindow, dataWindow) {
         $('.window-container').addClass('window-container-preload');
     }
 
+    $('.window').animate({'scrollTop': 0}, 100);
+
     $.ajax({
         type: 'POST',
         url: linkWindow,
@@ -908,7 +910,6 @@ function windowOpen(linkWindow, dataWindow) {
             $('.window-container').html(html + '<a href="#" class="window-close"></a>');
             $('.window .window-loading').remove();
         }
-        $('.window').animate({'scrollTop': 0}, 100);
 
         $('.window-catalogue-descr-wrap').each(function() {
             var curBlock = $(this);

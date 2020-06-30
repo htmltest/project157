@@ -244,7 +244,7 @@ h1 {margin-top:41px}
     .dashboard-zone-item-category-value > span > img {display:inline-block; vertical-align:middle; height:24px}
 }
 
-.dashboard-zone-empty {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0; text-align:center; max-width:800px}
+.dashboard-zone-empty {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0; text-align:center}
 .dashboard-zone-empty-icon {width:82px; height:82px; margin:0 auto; text-align:center; line-height:82px; background:#cce8f4; border-radius:50%}
 .dashboard-zone-empty-icon img {display:inline-block; vertical-align:middle; margin:-2px 0 0 0}
 .dashboard-zone-empty-text {margin:26px 0 0 0; text-align:center; color:#171717; font-weight:normal; font-size:18px; line-height:27px}
@@ -258,30 +258,32 @@ h1 {margin-top:41px}
     .dashboard-zone-empty-btn {margin:23px 0 0 0}
 }
 
-.dashboard-zone-loading {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0 85px 0; text-align:center; max-width:800px}
-.dashboard-zone-loading-icon {width:82px; height:82px; margin:0 auto; text-align:center; line-height:82px; background:#e8f5fa; border-radius:50%}
+.dashboard-zone-loading {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0 85px 0; text-align:center}
+.dashboard-zone-loading-icon {width:82px; height:82px; margin:0 auto; text-align:center; line-height:82px; background:#cce8f4; border-radius:50%}
 .dashboard-zone-loading-icon img {display:inline-block; vertical-align:middle; margin:-2px 0 0 0}
-.dashboard-zone-loading-text {margin:26px 0 0 0; text-align:center; color:#171717; font-weight:normal; font-size:18px; line-height:27px}
+.dashboard-zone-loading-title {margin:23px 0 0 0; text-align:center; color:#171717; font-weight:500; font-size:18px; line-height:27px}
+.dashboard-zone-loading-text {margin:4px 0 0 0; text-align:center; color:#171717}
 
 @media screen and (max-width:1169px) {
     .dashboard-zone-loading {margin:30px 0; padding:50px 20px 64px 20px}
     .dashboard-zone-loading-icon {width:112px; height:112px; line-height:112px}
-    .dashboard-zone-loading-icon img {width:39px}
-    .dashboard-zone-loading-text {margin:30px 0 0 0; font-size:20px; line-height:30px; font-weight:600}
+    .dashboard-zone-loading-icon img {transform:scale(1.45)}
+    .dashboard-zone-loading-title {font-weight:normal; font-size:24px; line-height:36px}
 }
 
-.dashboard-zone-cancel {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0 85px 0; text-align:center; max-width:800px}
-.dashboard-zone-cancel-icon {width:82px; height:82px; margin:0 auto; text-align:center; line-height:82px; background:rgba(244, 204, 204, 0.63); border-radius:50%}
+.dashboard-zone-cancel {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0 85px 0; text-align:center}
+.dashboard-zone-cancel-icon {width:82px; height:82px; margin:0 auto; text-align:center; line-height:82px; background:rgba(244, 204, 204, 0.65); border-radius:50%}
 .dashboard-zone-cancel-icon img {display:inline-block; vertical-align:middle; margin:-2px 0 0 0}
-.dashboard-zone-cancel-text {margin:26px 0 0 0; text-align:center; color:#171717; font-weight:normal; font-size:18px; line-height:27px}
-.dashboard-zone-cancel-text a {text-decoration:none; border-bottom:1px solid #2984df}
+.dashboard-zone-cancel-title {margin:23px 0 0 0; text-align:center; color:#171717; font-weight:500; font-size:18px; line-height:27px}
+.dashboard-zone-cancel-text {margin:4px 0 0 0; text-align:center; color:#171717}
+.dashboard-zone-cancel-text a {text-decoration:none; color:#171717; border-bottom:1px solid #2984DF}
 .dashboard-zone-cancel-text a:hover {border-bottom-color:transparent}
 
 @media screen and (max-width:1169px) {
     .dashboard-zone-cancel {margin:30px 0; padding:50px 20px 64px 20px}
     .dashboard-zone-cancel-icon {width:112px; height:112px; line-height:112px}
-    .dashboard-zone-cancel-icon img {width:39px}
-    .dashboard-zone-cancel-text {margin:30px 0 0 0; font-size:20px; line-height:30px; font-weight:600}
+    .dashboard-zone-cancel-icon img {transform:scale(1.45)}
+    .dashboard-zone-cancel-title {font-weight:normal; font-size:24px; line-height:36px}
 }
 
 .dashboard-zone-success {border:1px solid #e2e2e2; margin:40px 0 0 0; padding:66px 0 99px 0; text-align:center}
@@ -294,6 +296,20 @@ h1 {margin-top:41px}
     .dashboard-zone-success-icon {width:112px; height:112px; line-height:112px}
     .dashboard-zone-success-icon img {width:53px}
     .dashboard-zone-success-text {margin:30px 26px 0 26px; font-size:20px; line-height:30px; font-weight:600}
+}
+
+.dashboard-zone-notmeets {border:1px solid #9cd7f0; margin:40px 0 0 0; padding:45px 0 48px 0; text-align:center}
+.dashboard-zone-notmeets-icon {width:96px; height:96px; margin:0 auto; text-align:center; line-height:96px; background:rgba(0, 140, 201, 0.05); border-radius:50%}
+.dashboard-zone-notmeets-icon img {display:inline-block; vertical-align:middle; margin:-2px 0 0 0}
+.dashboard-zone-notmeets-title {margin:18px 0 0 0; text-align:center; color:#0678a9; font-weight:normal; font-size:24px; line-height:36px}
+.dashboard-zone-notmeets-text {margin:3px auto 0 auto; text-align:center; color:#237396; max-width:500px}
+.dashboard-zone-notmeets-text a {color:#237396; text-decoration:none; border-bottom:1px solid #609db8}
+.dashboard-zone-notmeets-text a:hover {border-bottom-color:transparent}
+
+@media screen and (max-width:1169px) {
+    .dashboard-zone-notmeets {margin:30px 0; padding:50px 20px 64px 20px}
+    .dashboard-zone-notmeets-icon {width:112px; height:112px; line-height:112px}
+    .dashboard-zone-notmeets-text {max-width:none}
 }
 
 .back-link {float:left; display:block; vertical-align:middle; margin:10px 0 0 -30px; font-size:0; line-height:0; letter-spacing:-1px}
@@ -528,9 +544,9 @@ h1+.meet-card-btns {margin-top:16px}
 }
 
 .cabinet-form {max-width:575px}
-.support-form {max-width:774px}
+.support-form {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.2s; margin:40px 0 75px 0; border-top:1px solid rgba(41, 132, 223, 0.2); padding:19px 0 0 0}
+.support-form.visible {position:relative; left:auto; top:auto; opacity:1}
 .cabinet-form .message {margin-right:-170px}
-.wrapper .support-form form {margin-top:-4px}
 
 @media screen and (max-width:1169px) {
     .cabinet-form .message {margin-right:0}
@@ -713,10 +729,12 @@ h1+.meet-card-btns {margin-top:16px}
     .support-form-bottom .form-submit {margin:46px 0 0 0; float:none}
 }
 
-.support-messages {margin:49px 0 0 0; border-top:1px solid #d9d9d9; padding:20px 0 0 0}
-.support-message {margin:20px 0 0 0; background:#ebf9ff; position:relative; border-radius:2px; padding:25px 30px 28px 30px}
-.support-message::before {content:""; display:block; position:absolute; left:0; top:0; bottom:0; width:5px; background:#008cc9}
-.support-message-user {background:#f8f8f8}
+.support-open-form {margin:40px 0 34px 0}
+.support-open-form .btn {padding:0 15px}
+
+.support-messages {margin:34px 0 0 0; border-top:2px solid rgba(41, 133, 223, 0.2)}
+.support-message {position:relative; padding:30px 0 23px 0; border-bottom:1px solid rgba(41, 133, 223, 0.2)}
+.support-message::before {content:""; display:block; position:absolute; left:-24px; top:0; bottom:0; width:4px; background:#2984df}
 .support-message-user::before {display:none}
 .support-message-author {font-weight:normal; font-size:18px; line-height:27px; color:#000}
 .support-message-author-name a {color:#000; text-decoration:none}
@@ -735,10 +753,7 @@ h1+.meet-card-btns {margin-top:16px}
 .support-message-files .doc-link a span {font-weight:300}
 
 @media screen and (max-width:1169px) {
-    .support-messages {margin:70px -20px 0 -20px; border-top:1px solid #d9d9d9; padding:20px 20px 0 20px}
-    .support-message {margin:20px 0 0 0; padding:25px 25px 38px 25px; border:1px solid #dadada}
-    .support-message::before {content:""; display:block; position:absolute; left:-1px; top:-1px; bottom:-1px; width:8px; background:#cce8f4}
-    .support-message-user::before {display:none}
+    .support-message::before {left:-20px}
     .support-message-author {font-weight:bold; font-size:20px; line-height:30px}
     .support-message-author-company {display:block; font-size:18px; line-height:27px; margin:3px 0 0 0; font-weight:normal}
     .support-message-author-company::before {display:none}
@@ -747,15 +762,19 @@ h1+.meet-card-btns {margin-top:16px}
     .support-message-files .doc-link {margin:24px 0 0 0; display:block}
 }
 
-.support-messages-success {width:664px; margin:20px 0 40px 0; border:2px solid #008cc9; padding:28px 30px}
+.support-messages-success {margin:34px 0 40px 0}
 .support-messages-success::after {content:""; display:block; clear:both}
-.support-messages-success-text {float:left; width:360px; font-size:18px; line-height:27px}
-.support-messages-success-btn {float:right; margin:6px 0 0 0}
-.support-messages-success-btn .btn {padding:0 20px}
+.support-messages-success-inner {float:left; border:2px solid rgba(87, 197, 31, 0.71); padding:14px 28px}
+.support-messages-success-text {float:left; font-size:18px; line-height:27px; padding:7px 0 0 0}
+.support-messages-success-btn {float:right; margin:0 0 0 24px}
+.support-messages-success-btn .btn {padding:0 10px 0 17px; height:41px; line-height:41px; font-size:12px; background:#57c51f; border-color:#57c51f}
+.support-messages-success-btn .btn:hover {background:rgba(87, 197, 31, 0.71); border-color:rgba(87, 197, 31, 0)}
 .support-messages-success-btn .btn img {vertical-align:middle; margin:-2px 10px 0 0}
+.support-messages-success-btn .btn::before {display:none}
 
 @media screen and (max-width:1169px) {
-    .support-messages-success {width:auto; margin:40px 0; padding:34px 58px 50px 58px; text-align:center}
+    .support-messages-success {width:auto; margin:40px 0; text-align:center}
+    .support-messages-success-inner {float:none; padding:34px 20px 50px 20px}
     .support-messages-success-text {float:none; width:auto; font-size:20px; line-height:30px}
     .support-messages-success-btn {float:none; margin:25px 0 0 0}
     .support-messages-success-btn .btn {height:53px; line-height:53px; font-size:17px; width:auto; display:inline-block}
@@ -928,16 +947,14 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-participant-text {font-size:14px; line-height:21px; color:#313131}
 .manager-table-cell-source {font-weight:600; font-size:14px; line-height:21px}
 .manager-table-cell-category {font-size:0; line-height:0; letter-spacing:-1px}
-.manager-table-cell-category img {display:inline-block; vertical-align:top; height:14px; margin:4px 0 0 10px; max-width:none}
-.manager-table-cell-category img:first-child {margin-left:0}
+.manager-table-cell-category > span {display:inline-block; vertical-align:top; height:14px; margin:4px 0 0 10px; max-width:none}
+.manager-table-cell-category > span:first-child {margin-left:0}
+.manager-table-cell-category > span img {height:14px}
 .manager-table-company-name {margin:-1px 0 0 0; font-size:15px; line-height:22px; font-weight:normal; position:relative; margin:0 0 0 13px}
 .manager-table-company-name::before {content:""; display:block; position:absolute; left:-13px; top:-1px; width:5px; height:20px}
-.manager-table-cell-company-type-1 .manager-table-company-name::before {background:#dedede}
+.manager-table-cell-company-type-1 .manager-table-company-name::before {background:#ffcccc}
 .manager-table-cell-company-type-2 .manager-table-company-name::before {background:#fce480}
 .manager-table-cell-company-type-3 .manager-table-company-name::before {background:#ade491}
-.manager-table-cell-company-type-4 .manager-table-company-name::before {background:#ff9c9c}
-.manager-table-cell-company-type-5 .manager-table-company-name::before {background:#38a9db}
-.manager-table-cell-company-type-6 .manager-table-company-name::before {background:#ffccfa}
 .manager-table-company-name a {text-decoration:none}
 .manager-table-company-name a:hover {color:#666}
 .manager-table-company-name span {display:inline-block; vertical-align:top; max-width:158px; position:relative; overflow:hidden; text-overflow:ellipsis}
@@ -956,7 +973,7 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-cell-fixed {visibility:hidden}
 .manager-table-comment {max-width:413px; position:relative; overflow:hidden; text-overflow:ellipsis}
 .manager-table-cell-meets {text-align:center; font-size:13px; line-height:23px}
-.manager-table-cell-meets span {font-size:15px; font-weight:normal; margin:0 4px 0 0}
+.manager-table-cell-meets span {font-size:15px; font-weight:normal; margin:0 4px 0 0; display:inline-block; vertical-align:middle}
 .manager-table-cell-sections {font-size:0; line-height:0; letter-spacing:-1px}
 .manager-table-section {display:inline-block; vertical-align:top; margin:-2px 0 0 10px}
 .manager-table-section:first-child {margin-left:0}
@@ -1121,9 +1138,9 @@ h1+.meet-card-btns {margin-top:16px}
     .manager-table-support-answer-mobile+.manager-table-events-type {clear:left}
 }
 
-.manager-table-faq-count {font-size:15px; line-height:23px; font-weight:normal; color:#313131}
-.manager-table-faq-count-sep {font-size:15px; line-height:23px; font-weight:normal; color:#bdbdbd; margin:0 4px 0 5px}
-.manager-table-faq-count-details {font-size:13px; line-height:23px; font-weight:normal; color:#222}
+.manager-table-faq-count {display:inline-block; vertical-align:middle; font-size:15px; line-height:23px; font-weight:normal; color:#313131}
+.manager-table-faq-count-sep {display:inline-block; vertical-align:middle; font-size:15px; line-height:23px; font-weight:normal; color:#bdbdbd; margin:0 4px 0 5px}
+.manager-table-faq-count-details {display:inline-block; vertical-align:middle; font-size:13px; line-height:23px; font-weight:normal; color:#222}
 .manager-table-faq-count-details-success {color:#1aa920}
 .manager-table-faq-count-details-fail {color:#cd4f57}
 
@@ -1132,35 +1149,6 @@ h1+.meet-card-btns {margin-top:16px}
     .manager-table-faq-count-sep {font-size:18px; line-height:27px}
     .manager-table-faq-count-details {font-size:17px; line-height:26px}
 }
-
-.faq-list {margin:30px 0 0 0; border-top:1px solid #d2d2d2}
-.faq-item {border-bottom:1px solid #d2d2d2}
-.faq-item-title a {display:block; position:relative; padding:17px 32px 17px 0; font-weight:normal; font-size:20px; line-height:30px; color:#000; text-decoration:none}
-.faq-item-title a::after {content:""; display:block; width:16px; height:16px; position:absolute; right:0; top:24px; transition:all 0.2s; background:url(../images/faq-item-title.svg) no-repeat}
-.faq-item.open .faq-item-title a::after {transform:rotate(45deg)}
-.faq-item-title a:hover {color:#008cc9}
-.faq-item-title > div {display:block; position:relative; padding:17px 32px 17px 0; font-weight:normal; font-size:20px; line-height:30px; color:#000; text-decoration:none}
-.faq-item-answer {display:none; max-width:740px; padding:0 0 30px 0}
-.faq-btn {text-align:center; margin:40px 0 0 0}
-
-@media screen and (max-width:1169px) {
-    .faq-item-title a {padding:20px 32px 20px 0; font-size:24px; line-height:36px; font-weight:normal}
-    .faq-item-title a::after {width:25px; height:25px; top:26px; background-size:100%}
-    .faq-item-title > div {padding:20px 32px 20px 0; font-size:24px; line-height:36px; font-weight:normal}
-    .faq-item-answer {max-width:none}
-}
-
-.faq-list-self .faq-item-title a {padding-top:10px}
-.faq-list-self .faq-item-title a::after {top:30px}
-.faq-list-self .faq-item-title a span {display:block; font-weight:300; font-size:14px; line-height:21px; color:#000}
-.faq-list-self .faq-item-title a strong {display:inline-block; vertical-align:middle; height:19px; background:#de4c55; font-weight:normal; color:#fff; font-size:14px; line-height:19px; margin:-2px 0 0 24px; padding:0 5px}
-.faq-list-self .faq-item-title a strong.new-answer {background:#4dc260}
-.faq-item-new-answer .faq-item-title a {position:relative}
-.faq-item-new-answer .faq-item-title a::before {content:""; display:block; position:absolute; left:-24px; top:0; bottom:0; width:4px; background:#4dc260}
-
-.faq-list-self .faq-item-title > div {padding-top:10px}
-.faq-list-self .faq-item-title > div span {display:block; font-weight:300; font-size:14px; line-height:21px; color:#000}
-.faq-list-self .faq-item-title > div strong {display:inline-block; vertical-align:middle; height:19px; background:#de4c55; font-weight:normal; color:#fff; font-size:14px; line-height:19px; margin:-2px 0 0 24px; padding:0 5px}
 
 .faq-list-add {margin:30px 0 0 0}
 .faq-list-add .btn {padding:0 20px}

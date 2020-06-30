@@ -6,7 +6,7 @@
 .manager-table-delegate-letter-2 {background:#38a9db}
 
 .manager-table-cell-action a.manager-table-action-confirm-quest {background:#eaeaea}
-.manager-table-cell-action a.manager-table-action-confirm-quest:hover {background:#eaeaea}
+.manager-table-cell-action a.manager-table-action-confirm-quest:hover {background:#dadada}
 .manager-table-cell-action a.manager-table-action-confirm-dashboard {background:#d0f6b8}
 .manager-table-cell-action a.manager-table-action-confirm-dashboard:hover {background:#bcec9d}
 .manager-table-cell-action a.manager-table-action-delete-dashboard {background:#ff7a7a}
@@ -58,6 +58,8 @@
 
 .tabs-content-inner > .manager-table-container-dashboard-feedback:first-child {margin-top:40px}
 
+.manager-table-cell-date a {text-decoration:none; color:#000}
+.manager-table-cell-date a:hover {text-decoration:underline}
 .manager-table-cell-date strong {font-weight:600; position:relative; margin:0 0 0 13px}
 .manager-table-cell-date strong::before {content:""; display:block; position:absolute; left:-13px; top:50%; height:20px; margin-top:-10px; width:5px}
 .manager-table-cell-date-1 strong::before {background:#dedede}
