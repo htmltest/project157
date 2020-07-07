@@ -402,7 +402,7 @@ h1+.meet-card-btns {margin-top:16px}
     .meet-card {margin:40px 0 0 0}
 }
 
-.meet-card-info {float:left; width:457px; font-weight:normal; font-size:18px; line-height:27px; margin:45px 0 0 0}
+.meet-card-info {float:left; width:446px; font-weight:normal; font-size:18px; line-height:27px; margin:45px 0 0 0}
 .meet-card-date {float:left; padding:0 0 0 38px; background:url(../images/meet-card-date.svg) no-repeat left 1px}
 .meet-card-time {float:left; margin:0 0 0 22px; padding:0 0 0 38px; background:url(../images/meet-card-time.svg) no-repeat left 1px}
 .meet-card-communication {float:left; width:100%; margin:15px 0 0 0}
@@ -1067,8 +1067,8 @@ h1+.meet-card-btns {margin-top:16px}
 
 .manager-table-wrapper .mCSB_horizontal.mCSB_inside > .mCSB_container {margin-bottom:47px}
 .manager-table-wrapper .mCSB_scrollTools.mCSB_scrollTools_horizontal {height:7px}
-.manager-table-wrapper .mCSB_scrollTools .mCSB_draggerRail {background:#e9e9e9}
-.manager-table-wrapper .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background:#fdc760}
+.manager-table-wrapper .mCSB_scrollTools .mCSB_draggerRail {background:#e9e9e9; border-radius:4px}
+.manager-table-wrapper .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background:#008cc9; border-radius:4px}
 
 .manager-table-fixed {position:absolute; right:0; top:0; background:#fff; border-bottom:1px solid #e8e8e8}
 .manager-table-fixed .manager-table-head {display:block; padding-left:30px}
@@ -1079,14 +1079,14 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-arrow-right.visible {display:block}
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right,
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right.visible {display:none}
-.manager-table-arrow-right-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-next.svg) no-repeat center; position:absolute; right:20px; top:0; margin-top:86px; transition:background-color 0.2s}
+.manager-table-arrow-right-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-next.svg) no-repeat center; position:absolute; right:20px; top:0; transition:background-color 0.2s}
 .manager-table-arrow-right:hover .manager-table-arrow-right-inner {background-color:rgba(252, 228, 128, 1)}
 
 .manager-table-arrow-left {position:absolute; display:none; left:0; top:0; bottom:47px; width:147px; background:linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%)}
 .manager-table-arrow-left.visible {display:block}
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right+.manager-table-arrow-left,
 .mCS_no_scrollbar+.manager-table-fixed+.manager-table-arrow-right+.manager-table-arrow-left.visible {display:none}
-.manager-table-arrow-left-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-prev.svg) no-repeat center; position:absolute; left:20px; top:0; margin-top:86px; transition:background-color 0.2s}
+.manager-table-arrow-left-inner {display:block; width:36px; height:36px; border-radius:50%; background:rgba(252, 228, 128, 0.3) url(../images/pager-prev.svg) no-repeat center; position:absolute; left:20px; top:0; transition:background-color 0.2s}
 .manager-table-arrow-left:hover .manager-table-arrow-left-inner {background-color:rgba(252, 228, 128, 1)}
 
 .manager-table-head-active+.manager-table-head {padding-left:12px}

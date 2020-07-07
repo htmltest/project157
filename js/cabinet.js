@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     $('.side-menu').mCustomScrollbar({
         axis: 'y'
     });
@@ -40,17 +40,11 @@ $(document).ready(function() {
     });
 
     $('body').on('mouseover', '.manager-table-arrow-left', function(e) {
-        $(this).parent().find('.manager-table-wrapper').mCustomScrollbar('stop').mCustomScrollbar('scrollTo', 'left', {
-            timeout: 0,
-            scrollEasing: 'linear'
-        });
+        $(this).parent().find('.manager-table-wrapper').mCustomScrollbar('stop').mCustomScrollbar('scrollTo', 'left');
     });
 
     $('body').on('mouseover', '.manager-table-arrow-right', function(e) {
-        $(this).parent().find('.manager-table-wrapper').mCustomScrollbar('stop').mCustomScrollbar('scrollTo', 'right', {
-            timeout: 0,
-            scrollEasing: 'linear'
-        });
+        $(this).parent().find('.manager-table-wrapper').mCustomScrollbar('stop').mCustomScrollbar('scrollTo', 'right');
     });
 
     $('body').on('mouseover', '.manager-table-section', function(e) {
@@ -280,10 +274,10 @@ $(document).ready(function() {
     $('body').on('click', '.manager-table-filter-params-window-title', function(e) {
         $(this).parent().toggleClass('open');
     });
-    
-    $('.support-open-form a').click(function(e) {
-        $('.support-form').addClass('visible');
-        $('.support-open-form').hide();
+
+    $('body').on('click', '.support-open-form a', function(e) {
+        $(this).parent().parent().find('.support-form').addClass('visible');
+        $(this).parent().parent().find('.support-open-form').hide();
         e.preventDefault();
     });
 
@@ -529,12 +523,31 @@ $(window).on('load resize', function() {
                 keyboard: {
                     enable: false
                 },
-                scrollInertia: 0,
+                scrollInertia: 350,
                 contentTouchScroll: false,
                 callbacks: {
                     onInit: function() {
                         curWrapper.parent().find('.manager-table-arrow-left').removeClass('visible');
                         curWrapper.parent().find('.manager-table-arrow-right').addClass('visible');
+
+                        var windowScroll = $(window).scrollTop();
+                        var windowHeight = $(window).height();
+                        curWrapper.parent().find('.manager-table-arrow-right .manager-table-arrow-right-inner').each(function() {
+                            var curArrow = $(this);
+                            var curParent = curArrow.parent();
+                            var curDiff = 0;
+                            if (curWrapper.parents().filter('.tabs-content').length > 0) {
+                                curDiff = curWrapper.parents().filter('.tabs-content').offset().top;
+                            }
+                            if (curParent.offset().top - curDiff + 86 < windowScroll) {
+                                curArrow.css({'top': windowScroll - (curParent.offset().top - curDiff)});
+                                if (curArrow.offset().top - curDiff + curArrow.outerHeight() > curParent.offset().top - curDiff + curParent.outerHeight()) {
+                                    curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight()});
+                                }
+                            } else {
+                                curArrow.css({'top': 86});
+                            }
+                        });
                     },
 
                     whileScrolling: function() {
@@ -550,6 +563,43 @@ $(window).on('load resize', function() {
                             curWrapper.parent().find('.manager-table-arrow-left').addClass('visible');
 
                         }
+
+                        var windowScroll = $(window).scrollTop();
+                        var windowHeight = $(window).height();
+
+                        curWrapper.parent().find('.manager-table-arrow-right.visible .manager-table-arrow-right-inner').each(function() {
+                            var curArrow = $(this);
+                            var curParent = curArrow.parent();
+                            var curDiff = 0;
+                            if (curWrapper.parents().filter('.tabs-content').length > 0) {
+                                curDiff = curWrapper.parents().filter('.tabs-content').offset().top;
+                            }
+                            if (curParent.offset().top - curDiff + 86 < windowScroll) {
+                                curArrow.css({'top': windowScroll - (curParent.offset().top - curDiff)});
+                                if (curArrow.offset().top - curDiff + curArrow.outerHeight() > curParent.offset().top - curDiff + curParent.outerHeight()) {
+                                    curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight()});
+                                }
+                            } else {
+                                curArrow.css({'top': 86});
+                            }
+                        });
+
+                        curWrapper.parent().find('.manager-table-arrow-left.visible .manager-table-arrow-left-inner').each(function() {
+                            var curArrow = $(this);
+                            var curParent = curArrow.parent();
+                            var curDiff = 0;
+                            if (curWrapper.parents().filter('.tabs-content').length > 0) {
+                                curDiff = curWrapper.parents().filter('.tabs-content').offset().top;
+                            }
+                            if (curParent.offset().top - curDiff + 86 < windowScroll) {
+                                curArrow.css({'top': windowScroll - (curParent.offset().top - curDiff)});
+                                if (curArrow.offset().top - curDiff + curArrow.outerHeight() > curParent.offset().top - curDiff + curParent.outerHeight()) {
+                                    curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight()});
+                                }
+                            } else {
+                                curArrow.css({'top': 86});
+                            }
+                        });
                     }
                 }
             });
@@ -590,25 +640,37 @@ $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
     var windowHeight = $(window).height();
 
-    $('.manager-table-arrow-right.visible .manager-table-arrow-right-inner').each(function() {
+    $('.manager-table-arrow-right .manager-table-arrow-right-inner').each(function() {
         var curArrow = $(this);
         var curParent = curArrow.parent();
-        if (curParent.offset().top < windowScroll) {
-            curArrow.css({'top': windowScroll - curParent.offset().top});
-            if (curArrow.offset().top + curArrow.outerHeight() > curParent.offset().top + curParent.outerHeight()) {
-                curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight() - 86});
+        var curDiff = 0;
+        if (curArrow.parents().filter('.tabs-content').length > 0) {
+            curDiff = curArrow.parents().filter('.tabs-content').offset().top;
+        }
+        if (curParent.offset().top - curDiff + 86 < windowScroll) {
+            curArrow.css({'top': windowScroll - (curParent.offset().top - curDiff)});
+            if (curArrow.offset().top - curDiff + curArrow.outerHeight() > curParent.offset().top - curDiff + curParent.outerHeight()) {
+                curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight()});
             }
+        } else {
+            curArrow.css({'top': 86});
         }
     });
 
-    $('.manager-table-arrow-left.visible .manager-table-arrow-left-inner').each(function() {
+    $('.manager-table-arrow-left .manager-table-arrow-left-inner').each(function() {
         var curArrow = $(this);
         var curParent = curArrow.parent();
-        if (curParent.offset().top < windowScroll) {
-            curArrow.css({'top': windowScroll - curParent.offset().top});
-            if (curArrow.offset().top + curArrow.outerHeight() > curParent.offset().top + curParent.outerHeight()) {
-                curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight() - 86});
+        var curDiff = 0;
+        if (curArrow.parents().filter('.tabs-content').length > 0) {
+            curDiff = curArrow.parents().filter('.tabs-content').offset().top;
+        }
+        if (curParent.offset().top - curDiff + 86 < windowScroll) {
+            curArrow.css({'top': windowScroll - (curParent.offset().top - curDiff)});
+            if (curArrow.offset().top - curDiff + curArrow.outerHeight() > curParent.offset().top - curDiff + curParent.outerHeight()) {
+                curArrow.css({'top': curParent.outerHeight() - curArrow.outerHeight()});
             }
+        } else {
+            curArrow.css({'top': 86});
         }
     });
 });

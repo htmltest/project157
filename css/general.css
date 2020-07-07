@@ -97,13 +97,6 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .message-text p {margin:0}
 .message-text p+p {margin-top:10px}
 
-.window .message {margin:20px 0; padding:27px 30px 20px 30px}
-.window .message+.message {margin-top:-5px}
-.window .message-title {font-weight:500; font-size:20px; line-height:30px; float:none; width:auto; margin:0; padding:0 0 0 56px}
-.window .message-title::before {left:0; top:-3px}
-.window .message-text {margin:13px 0 0 0; min-height:0; font-size:18px; line-height:27px; font-weight:normal; color:#696969}
-.window .message-text::before {display:none}
-
 @media screen and (max-width:1169px) {
     .message {margin:20px 0; padding:27px 30px 20px 30px}
     .message+.message {margin-top:-5px}
@@ -389,25 +382,29 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
     .tabs-content.open .tabs-content-inner {position:relative; left:auto; top:auto; opacity:1}
 }
 
-.pager {margin:35px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+.pager {margin:45px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
 .pager a,
-.pager span {display:inline-block; vertical-align:top; width:40px; height:40px; font-weight:normal; font-size:16px; line-height:40px; color:#373737; text-decoration:none; text-align:center; position:relative}
-.pager a.pager-prev {margin:0 10px 0 0; background:url(../images/pager-prev.svg) no-repeat center}
-.pager a.pager-next {margin:0 0 0 10px; background:url(../images/pager-next.svg) no-repeat center}
-.pager a::before {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager-hover.svg) no-repeat; opacity:0; z-index:-1; transition:all 0.2s; pointer-events:none}
-.pager a:hover::before {opacity:1}
+.pager span {display:inline-block; vertical-align:top; width:40px; height:40px; font-weight:normal; font-size:16px; line-height:40px; color:#373737; text-decoration:none; text-align:center; position:relative; margin:0 5px}
+.pager a.pager-prev {margin:0 5px 0 0; background:url(../images/pager-prev.svg) no-repeat center}
+.pager a.pager-next {margin:0 0 0 5px; background:url(../images/pager-next.svg) no-repeat center}
+.pager a::before {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager.svg) no-repeat; z-index:-1; pointer-events:none}
+.pager a::after {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager-hover.svg) no-repeat; opacity:0; z-index:-1; transition:all 0.2s; pointer-events:none}
+.pager a:hover::after {opacity:1}
 .pager a.active::before {display:none}
+.pager a.active::after {background:url(../images/pager-active.svg) no-repeat; opacity:1}
 .pager a.active {font-weight:bold; color:#fff}
-.pager a::after {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager-active.svg) no-repeat; opacity:0; z-index:-1; transition:all 0.2s; pointer-events:none}
-.pager a.active::after {opacity:1}
+.pager a.pager-prev::before {display:none}
+.pager a.pager-next::before {display:none}
 
 @media screen and (max-width:1169px) {
     .pager {margin:30px 0 0 0; position:relative}
+    .catalogue .pager {margin:30px 20px 0 20px}
     .pager a,
     .pager span {width:62px; height:62px; font-size:20px; line-height:62px; font-weight:600}
     .pager a.active {font-weight:bold}
-    .pager a::before {display:none}
-    .pager a::after {width:74px; height:77px; margin:-39px 0 0 -36px; background:url(../images/pager-active-mobile.svg) no-repeat}
+    .pager a::before {width:74px; height:77px; margin:-39px 0 0 -36px; background-size:100%}
+    .pager a::after {width:74px; height:77px; margin:-39px 0 0 -36px; display:none}
+    .pager a.active::after {display:block; background:url(../images/pager-active-mobile.svg) no-repeat; opacity:1}
     .pager a.pager-prev {position:absolute; left:0; top:0; margin:0; background:url(../images/pager-prev-mobile.svg) no-repeat center; width:14px}
     .pager a.pager-next {position:absolute; right:0; top:0; margin:0; background:url(../images/pager-next-mobile.svg) no-repeat center; width:14px}
 }
@@ -594,10 +591,10 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
 .contacts-item {display:inline-block; vertical-align:top; width:33.33%; padding:20px 10px 0 10px}
 .contacts-item-inner {position:relative; text-decoration:none; border:1px solid #e2e2e2; background:#fff}
 .contacts-item-inner::before {content:""; display:block; position:absolute; right:-11px; bottom:-11px; width:100%; height:100%; border-right:10px solid #cce8f4; border-bottom:10px solid #cce8f4; pointer-events:none; transition:all 0.2s; z-index:-1}
-.contacts-item-content {display:table; width:100%}
+.contacts-item-content {display:table; width:100%; table-layout:fixed}
 .contacts-item-photo {display:table-cell; vertical-align:middle; line-height:0; width:124px; padding:0 20px 0 30px; height:128px}
 .contacts-item-photo img {display:block; width:100%; border-radius:50%}
-.contacts-item-text {display:table-cell; vertical-align:middle; height:128px; padding:0 20px 0 0}
+.contacts-item-text {display:table-cell; vertical-align:middle; height:128px; padding:0 20px 0 0; width:100%}
 .contacts-item-text a {text-decoration:none}
 .contacts-item-text a:hover {text-decoration:underline}
 .contacts-item-name {font-size:22px; line-height:33px; font-weight:normal; color:#171717; letter-spacing:0}
@@ -792,7 +789,7 @@ footer .container {position:relative}
 
 @media screen and (max-width:1169px) {
     .footer-social {margin:36px 0 0 0; text-align:center}
-    .footer-social a {margin:0 0 0 31px}
+    .footer-social a {margin:0 0 0 28px}
     .footer-social a:first-child {margin:0}
     .footer-social svg {width:62px; height:62px}
 }
@@ -859,12 +856,15 @@ footer .container {position:relative}
 .window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
 .window-loading {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/loading.gif) no-repeat center}
 .window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; background:#fff; margin:30px 0; transition:transform 0.2s, opacity 0.2s}
+.window.with-tabs .window-container {vertical-align:top}
 .window-container-preload {opacity:0}
-.window-close {display:block; position:absolute; right:10px; top:20px; width:30px; height:30px; background:url(../images/window-close.svg) no-repeat; border-radius:50%}
+.window-close {display:block; position:absolute; right:10px; top:20px; width:30px; height:30px; background:#fff url(../images/window-close.svg) no-repeat; border-radius:50%}
+.window-close:hover {background-color:#aadef5}
 
 @media screen and (max-width:1169px) {
     .window-container {margin:50px 0}
     .window-close {right:0; top:-41px; width:20px; height:20px; background:url(../images/window-close-mobile.svg) no-repeat}
+    .window-close:hover {background-color:transparent}
 }
 
 .text-with-hint {position:relative}
@@ -1009,7 +1009,8 @@ footer .container {position:relative}
 .faq-list-self .faq-item-title a strong {display:inline-block; vertical-align:middle; height:19px; background:#de4c55; font-weight:normal; color:#fff; font-size:14px; line-height:19px; margin:-2px 0 0 24px; padding:0 5px}
 .faq-list-self .faq-item-title a strong.new-answer {background:#4dc260}
 .faq-item-new-answer .faq-item-title a {position:relative}
-.faq-item-new-answer .faq-item-title a::before {content:""; display:block; position:absolute; left:-17px; top:0; bottom:0; width:4px; background:#4dc260}
+.faq-item-new-answer .faq-item-title {position:relative}
+.faq-item-new-answer .faq-item-title::before {content:""; z-index:1; display:block; position:absolute; left:-17px; top:0; bottom:0; width:4px; background:#4dc260}
 
 .faq-list-self .faq-item-title > div {padding-top:10px}
 .faq-list-self .faq-item-title > div span {display:block; font-weight:300; font-size:14px; line-height:21px; color:#000}

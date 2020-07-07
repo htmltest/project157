@@ -1,7 +1,9 @@
 .manager-table-cell-section img {vertical-align:middle; margin:-2px 10px 0 0}
 
 .manager-table-cell-delegate-new {position:relative; padding-left:62px}
+.manager-table-cell-delegate-comments:first-child {position:relative; padding-left:32px; white-space:nowrap}
 .manager-table-delegate-letter {position:absolute; left:30px; top:16px; width:24px; height:24px; text-align:center; line-height:26px; color:#fffdfd; font-size:14px; font-weight:800; border-radius:50%}
+.manager-table-cell-delegate-comments .manager-table-delegate-letter {left:0}
 .manager-table-delegate-letter-1 {background:#ff9c9c}
 .manager-table-delegate-letter-2 {background:#38a9db}
 
@@ -103,9 +105,136 @@
 .event-card-section {margin:60px 0 0 0}
 .event-card-section-title {font-size:24px; line-height:36px; font-weight:500; margin:0 0 16px 0}
 
-.meet-card-info {border-top:1px solid #008cc9; margin:21px 0 0 0; padding:20px 0 0 0}
+.meet-card {margin:0}
+.meet-card-info {border-top:3px solid rgba(41, 132, 223, 0.2); margin:0; padding:20px 0 24px 0; border-bottom:1px solid #e8e8e8}
 .meet-card-company-info-props {margin:47px 0 0 0}
 .meet-card-company-info-props-title {width:148px}
 .meet-card-company-info-props-value {margin:0 0 0 168px}
 .meet-card-company-info-props-delegate {position:relative; padding:0 0 0 38px}
-.meet-card-company-info-props-delegate .manager-table-delegate-letter {left:0; top:4px}
+.meet-card-company-info-props-delegate .manager-table-delegate-letter {left:0; top:-2px}
+.meet-card-communication {margin:25px 0 0 0}
+
+.meet-card-data {margin:70px -42px 0 -42px}
+.meet-card-data::after {content:""; display:block; clear:both}
+.meet-card-data-item {float:left; width:50%; padding:0 42px}
+.meet-card-data h2 {margin:0}
+.meet-card-data-header {border-bottom:3px solid rgba(41, 132, 223, 0.2); padding:0 0 7px 0}
+.meet-card-data-header::after {content:""; display:block; clear:both}
+.meet-card-data-header h2 {float:left}
+.meet-card-data-header-link {float:right; font-size:14px; line-height:21px; padding:8px 0 0 0}
+.meet-card-data-header-link a {color:#272727; text-decoration:none}
+.meet-card-data-header-link a::after {content:""; display:inline-block; vertical-align:middle; margin:-2px 0 0 5px; width:15px; height:6px; background:url(../images/meet-card-data-header-link.svg) no-repeat right top; transition:all 0.2s}
+.meet-card-data-header-link a:hover::after {width:25px; margin-right:-10px}
+.meet-card-data-container {border-bottom:1px solid #e8e8e8}
+.meet-card-data-props {padding:0 0 15px 0}
+.meet-card-data-props::after {content:""; display:block; clear:both}
+.meet-card-data-props-col {float:left; margin:0 0 0 40px}
+.meet-card-data-props-col:first-child {margin:0}
+.meet-card-data-props-item {margin:25px 0 0 0; font-size:14px; line-height:21px}
+.meet-card-data-props-item-title {color:#7c7c7c}
+.meet-card-data-props-item-value {color:#000; margin:6px 0 0 0}
+.meet-card-data-info {padding:21px 0 9px 0; border-bottom:1px solid #e8e8e8}
+.meet-card-data-info::after {content:""; display:block; clear:both}
+.meet-card-data-company {float:left; width:calc(100% - 200px); display:table}
+.meet-card-data-company-logo {display:table-cell; vertical-align:middle; width:68px; line-height:0}
+.meet-card-data-company-logo img {max-width:68px; max-height:43px}
+.meet-card-data-company-info {display:table-cell; vertical-align:middle; padding:0 0 0 20px}
+.meet-card-data-company-title {font-weight:bold; font-size:15px; line-height:23px; color:#171717}
+.meet-card-data-company-brands {font-size:14px; line-height:21px; color:#000}
+.meet-card-data-countries {float:right; width:170px}
+.meet-card-data-country {margin:3px 0 0 0; font-size:14px; line-height:23px; white-space:nowrap; position:relative}
+.meet-card-data-country:first-child {margin:0}
+.meet-card-data-country img {display:inline-block; vertical-align:middle; height:18px; max-width:none; margin:-2px 9px 0 0}
+.meet-card-data-country .catalogue-item-country-item-hint-title {left:auto; right:100%; margin-left:0; margin-right:11px}
+.meet-card-data-country .catalogue-item-country-item-hint-title::before {left:auto; right:-8px; transform:rotate(45deg)}
+.meet-card-data-props {padding:13px 0 19px 0}
+.meet-card-data-props::after {content:""; display:block; clear:both}
+.meet-card-data-prop {float:left; margin:0 0 0 40px}
+.meet-card-data-prop:first-child {margin:0}
+.meet-card-data-prop-title {font-size:14px; line-height:21px; color:#7c7c7c}
+.meet-card-data-prop:nth-child(1) {max-width:calc(100% - 310px)}
+.meet-card-data-prop:nth-child(2) {max-width:90px}
+.meet-card-data-prop:nth-child(3) {max-width:140px}
+.meet-card-data-prop-value {margin:6px 0 0 0}
+.meet-card-data-prop-categories {font-size:0; line-height:0; letter-spacing:-1px; margin:-11px 0 0 -12px}
+.meet-card-data-prop-categories img {height:18px}
+.meet-card-data-prop-categories .catalogue-item-country-item-hint {display:inline-block; vertical-align:top; margin:12px 0 0 12px}
+
+.meet-card-history {margin:6px 0 0 0; display:table; width:100%; border-collapse:collapse; border-top:3px solid rgba(41, 132, 223, 0.2); border-bottom:1px solid #e8e8e8; table-layout:fixed}
+.meet-card-history-headers {display:table-row}
+.meet-card-history-header {display:table-cell; vertical-align:top; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase; color:#81a2b0; font-weight:normal; padding:25px 0 9px 0}
+.meet-card-history-header:nth-child(1) {width:134px}
+.meet-card-history-header:nth-child(2) {width:180px}
+.meet-card-history-header:nth-child(3) {width:150px}
+.meet-card-history-row {display:table-row}
+.meet-card-history-cell {display:table-cell; vertical-align:top; font-size:14px; line-height:21px; color:#000; padding:14px 0 15px 0; border-top:1px solid #e8e8e8}
+.meet-card-history-cell:nth-child(1) {width:134px}
+.meet-card-history-cell:nth-child(1) strong {margin:0 0 0 5px}
+.meet-card-history-cell:nth-child(2) {width:180px; padding-right:20px}
+.meet-card-history-cell:nth-child(3) {width:150px; padding-right:20px}
+.meet-card-history-author {font-size:15px; font-weight:normal}
+.meet-card-history-cell-comment {white-space:nowrap; position:relative; overflow:hidden; text-overflow:ellipsis}
+
+.window-lkm {width:1104px}
+.window-lkm .window-title span {display:inline-block; vertical-align:middle; margin:0 0 0 40px; position:relative; font-weight:300; font-size:16px; line-height:24px; color:#403f3f}
+.window-lkm .window-title span::before {content:""; display:block; position:absolute; left:-18px; top:50%; width:1px; height:13px; margin-top:-6.5px; background:#c4c4c4}
+.window-lkm .window-title a {margin:4px 0 0 18px; display:inline-block; vertical-align:middle; color:#272727; text-decoration:none; font-weight:300; font-size:14px; line-height:21px}
+.window-lkm .window-title a::after {content:""; display:inline-block; vertical-align:middle; margin:-2px 0 0 5px; width:15px; height:6px; background:url(../images/meet-card-data-header-link.svg) no-repeat right top; transition:all 0.2s}
+.window-lkm .window-title a:hover::after {width:25px; margin-right:-10px}
+
+.window-lkm-container {padding:30px 40px 57px 40px}
+.window-lkm-container .tabs {margin:0}
+
+.window-lkm-action {margin:20px 0 25px 0}
+.window-lkm-action::after {content:""; display:block; clear:both}
+.window-lkm-action-btn {float:left; margin:0 0 0 17px}
+.window-lkm-action-btn:first-child {margin:0}
+.window-lkm-action-btn .btn {padding:0 20px}
+.window-lkm-action-btn img {vertical-align:middle; margin:-2px 9px 0 0}
+.window-lkm-action-btn .btn::before {display:none}
+
+.meet-card-data-item-contacts {margin:10px 0 0 0; max-width:377px}
+.meet-card-data-item-contacts .contacts-item {display:block; width:auto; padding:0}
+.window .meet-card-data {margin-top:57px}
+
+.meet-card-data-communication {font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 0 -30px}
+.meet-card-data-communication-item {display:inline-block; vertical-align:top; white-space:nowrap; margin:19px 0 0 30px; font-size:16px; line-height:24px; letter-spacing:0; font-weight:normal; color:#171717}
+.meet-card-data-communication-item img {vertical-align:middle; margin:-2px 10px 0 0}
+
+.window-card-info {max-width:515px; margin:43px 0 0 0; border-bottom:1px solid #e8e8e8}
+.window-card-info-row {border-top:1px solid #e8e8e8; padding:12px 0 16px 0}
+.window-card-info-row::after {content:""; display:block; clear:both}
+.window-card-info-row-label {float:left; width:305px; color:#7c7c7c}
+.window-card-info-row-value {margin:0 0 0 325px}
+.window-card-info-row-value .dashboard-zone-item-status {margin:4px 0 0 0}
+.window-card-info-row-value .dashboard-zone-item-status::before {display:none}
+.window-card-info-row-value .dashboard-zone-item-status-inner {padding:0}
+
+.window .tabs-content-inner > .manager-table-container:first-child {margin-top:40px}
+.manager-table-comments {white-space:normal}
+
+.comment-add-link {margin:30px 0}
+.comment-add-link .btn {padding:0 17px; background:#e5f3fa; color:#000; border-color:#e5f3fa}
+.comment-add-link .btn::before {display:none}
+.comment-add-link .btn:hover {background:#1089bd; color:#fff; border-color:#1089bd}
+.comment-add-link .btn svg {display:inline-block; vertical-align:middle; margin:-2px 8px 0 0}
+.comment-add-link .btn path {stroke:#000; transition:all 0.2s}
+.comment-add-link .btn:hover path {stroke:#fff}
+
+.manager-table-meetdays {width:auto}
+.manager-table-cell-meet-time {font-weight:600; font-size:15px; line-height:23px; vertical-align:middle; width:106px; padding:5px 0}
+.manager-table-cell-meet-time-inner {width:106px}
+.manager-table-cell-meet-cell {width:62px; vertical-align:middle; padding:9px 13px; font-size:0; line-height:0}
+.manager-table-cell-meet-cell:last-child {border-right:none}
+.manager-table-cell-meet-cell .dashboard-zone-item-status {margin:0}
+.manager-table-cell-meet-cell .dashboard-zone-item-status::before {display:none}
+.manager-table-cell-meet-cell .dashboard-zone-item-status-inner {padding:0}
+.manager-table-cell-meet-cell .dashboard-zone-item-status-inner span {display:block; width:36px; height:20px}
+.manager-table-cell-meet-time-title {width:106px; vertical-align:top; padding:9px 0 14px 0; border-top:none; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase; color:#81a2b0; font-weight:normal}
+.manager-table-cell-meet-cell-title {width:62px; vertical-align:top; padding:7px 14px 11px 15px; font-size:13px; line-height:20px; color:#313131; border-top:none}
+.manager-table-cell-meet-cell-title:last-child {border-right:none}
+.manager-table-cell-meet-cell-title strong {font-weight:normal}
+.manager-table-cell-meet-time-header {width:106px; padding:0; border:none}
+.manager-table-cell-meet-cell-month {text-align:center; border:none; padding:0}
+.manager-table-cell-meet-cell-month-header {position:relative; padding:0; height:49px; border:none}
+.manager-table-meetdays-month-title {position:absolute; left:9px; top:0; height:32px; text-align:center; font-weight:normal; font-size:14px; line-height:32px; color:#313131; background:#edf7fb}
