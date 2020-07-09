@@ -826,19 +826,22 @@ h1+.meet-card-btns {margin-top:16px}
     .manager-table-fitler-open .manager-table-filter-param {display:none}
 }
 
-.manager-table-filter-params-window {display:none; position:absolute; left:0; top:100%; margin-top:-2px; width:400px; padding:31px 0 38px 31px; background:#fff; border:1px solid #eaeaea; box-shadow:0px 10px 45px rgba(38, 38, 38, 0.1); border-radius:2px; z-index:10}
+.manager-table-filter-params-window {display:none; position:absolute; left:0; top:100%; margin-top:18px; padding:30px 0; background:#fff; border:1px solid #eaeaea; box-shadow:0px 10px 45px rgba(38, 38, 38, 0.1); border-radius:2px; z-index:10}
+.manager-table-filter-params-window::before {content:""; display:block; position:absolute; left:54px; top:-8px; width:13px; height:13px; border-left:1px solid #eaeaea; border-top:1px solid #eaeaea; transform:rotate(45deg); background:#fff}
 .manager-table-fitler-open .manager-table-filter-params-window {display:block}
-.wrapper .manager-table-filter-params-window form {margin:0; padding:0; position:relative}
-.wrapper .manager-table-filter-params-window form::before {content:""; display:block; position:absolute; left:160px; top:0; bottom:0; width:1px; background:#c4c4c4; opacity:0.4}
-.wrapper .manager-table-filter-params-window form::after {content:""; display:block; clear:both}
+.wrapper .manager-table-filter-params-window form {margin:0; padding:0; display:table}
+.manager-table-filter-params-window-col {display:table-cell; vertical-align:top; padding:0 30px; border-left:1px solid rgba(196, 196, 196, 0.4)}
+.manager-table-filter-params-window-col:first-child {border-left:none}
 
 @media screen and (max-width:1169px) {
     .manager-table-filter-params-window {position:relative; left:auto; top:auto; margin:30px 0; width:auto; padding:0; box-shadow:none; border-radius:0; z-index:10; border:none; border-top:1px solid #cfcfcf}
-    .wrapper .manager-table-filter-params-window form::before {display:none}
 }
 
-.manager-table-filter-params-window-dates {float:left; width:189px; margin:-5px 0 0 0}
-.manager-table-filter-params-window-props {float:left; width:157px; margin:-5px 0 0 0}
+.manager-table-filter-params-window-props {margin:30px 0 0 0; white-space:nowrap}
+.manager-table-filter-params-window-props:first-child {margin:0}
+
+.manager-table-filter-params-window-dates {margin:30px 0 0 0; white-space:nowrap}
+.manager-table-filter-params-window-dates:first-child {margin:0}
 
 @media screen and (max-width:1169px) {
     .manager-table-filter-params-window-dates {float:none; width:auto; border-top:1px solid #cfcfcf; padding:0 20px}
@@ -867,7 +870,10 @@ h1+.meet-card-btns {margin-top:16px}
 }
 
 .manager-table-filter-params-window-props-list {margin:10px 0 0 0}
-.manager-table-filter-params-window-props-list .form-checkbox {margin:8px 0 0 0}
+.manager-table-filter-params-window-props-list .form-checkbox {margin:8px 0 0 0; font-size:13px; line-height:20px}
+.manager-table-filter-params-window-props-list .form-checkbox em {font-style:normal; font-weight:300}
+.manager-table-filter-params-window-props-list .form-checkbox span {padding:0 0 0 24px}
+.manager-table-filter-params-window-props-list .form-checkbox span::before {width:16px; height:16px; top:1px}
 
 @media screen and (max-width:1169px) {
     .manager-table-filter-params-window-date {float:left; margin:0 0 20px 0; display:none}
@@ -887,6 +893,32 @@ h1+.meet-card-btns {margin-top:16px}
     .manager-table-filter-params-window-props-list .form-checkbox span {font-size:18px; line-height:27px; padding:13px 68px 16px 20px}
     .manager-table-filter-params-window-props-list .form-checkbox span::before {right:20px; top:13px; left:auto}
 }
+
+.manager-table-filter-params-window-props-trust {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0; width:5px; height:20px; background:#ffcccc}
+.manager-table-filter-params-window-props-trust-1 {background:#ffcccc}
+.manager-table-filter-params-window-props-trust-2 {background:#ade491}
+.manager-table-filter-params-window-props-trust-3 {background:#fce480}
+
+.manager-table-filter-params-window-props .form-select {margin:4px 0 0 0; width:249px}
+.manager-table-filter-params-window-props .form-select .select2-container {display:block}
+.manager-table-filter-params-window-props .form-select .select2-container .select2-selection--single {height:30px}
+.manager-table-filter-params-window-props .select2-container--default .select2-selection--single .select2-selection__rendered {font-size:13px; line-height:30px}
+.manager-table-filter-params-window-props .select2-container .select2-selection--single .select2-selection__rendered {padding-left:9px}
+.manager-table-filter-params-window-props .select2-container--default .select2-selection--single .select2-selection__arrow {width:20px; height:28px}
+.manager-table-filter-params-window-props .select2-container--default .select2-selection--single .select2-selection__arrow b {width:12px; height:7px; background-size:100%}
+.manager-table-filter-params-window-props .select2-container.select2-container--full .select2-selection--single .select2-selection__rendered {padding-top:0; line-height:30px}
+.manager-table-filter-params-window-props .select2-container--full::after {display:none}
+.window+.select2-container .select2-results__option {padding:5px 14px 3px 14px; font-size:13px; line-height:20px}
+.window+.select2-container .select2-results__option[aria-selected="true"]::after {opacity:0}
+.window+.select2-container .select2-search--dropdown .select2-search__field {font-size:13px; line-height:20px; padding:5px 14px 3px 14px; height:30px}
+
+.manager-table-filter-params-window-count-meets {margin:9px 0 0 0}
+.manager-table-filter-params-window-count-meets::after {content:""; display:block; clear:both}
+.manager-table-filter-params-window-count-meets-from {float:left; margin:0 9px 0 0; font-size:14px; font-weight:normal; line-height:30px; color:#404040}
+.manager-table-filter-params-window-count-meets-to {float:left; margin:0 9px 0 19px; font-size:14px; font-weight:normal; line-height:30px; color:#404040}
+.manager-table-filter-params-window-count-meets-input {float:left; width:48px}
+.manager-table-filter-params-window-count-meets-input .form-input {margin:0}
+.manager-table-filter-params-window-count-meets-input .form-input input {height:30px; font-size:13px; line-height:20px; color:#404040; text-align:center; padding:7px 0 3px 0}
 
 .manager-table-action {float:right; margin:0 0 0 30px}
 .manager-table-action-btn {float:left; margin:0 0 0 17px}
@@ -946,8 +978,8 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-participant-name a:hover path {stroke:#000}
 .manager-table-participant-text {font-size:14px; line-height:21px; color:#313131}
 .manager-table-cell-source {font-weight:600; font-size:14px; line-height:21px}
-.manager-table-cell-category {font-size:0; line-height:0; letter-spacing:-1px}
-.manager-table-cell-category > span {display:inline-block; vertical-align:top; height:14px; margin:4px 0 0 10px; max-width:none}
+.manager-table-cell-category {font-size:0; line-height:0; letter-spacing:-1px; white-space:normal}
+.manager-table-cell-category > span {display:inline-block; vertical-align:top; height:14px; margin:4px 10px 0 0; max-width:none}
 .manager-table-cell-category > span:first-child {margin-left:0}
 .manager-table-cell-category > span img {height:14px}
 .manager-table-company-name {margin:-1px 0 0 0; font-size:15px; line-height:22px; font-weight:normal; position:relative; margin:0 0 0 13px}

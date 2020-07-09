@@ -253,29 +253,84 @@
                                     <div class="manager-table-filter-params"></div>
                                     <div class="manager-table-filter-params-window">
                                         <form action="#" method="post">
-                                            <div class="manager-table-filter-params-window-dates">
-                                                <div class="manager-table-filter-params-window-title">Дата</div>
-                                                <div class="manager-table-filter-params-window-date">
-                                                    <div class="manager-table-filter-params-window-date-title">с</div>
-                                                    <div class="manager-table-filter-params-window-date-field">
-                                                        <div class="form-input form-input-date"><input type="text" name="dateFrom" class="filter-date-from" value="" /></div>
+                                            <div class="manager-table-filter-params-window-col">
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">Участие в разделах</div>
+                                                    <div class="manager-table-filter-params-window-props-list">
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="section1" checked="checked" /><span>оптовая торговля</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="section2" /><span>производитель</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="section3" /><span>ритейлер</span></label>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="manager-table-filter-params-window-date">
-                                                    <div class="manager-table-filter-params-window-date-title">по</div>
-                                                    <div class="manager-table-filter-params-window-date-field">
-                                                        <div class="form-input form-input-date"><input type="text" name="dateTo" class="filter-date-to" value="" /></div>
+
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">День встречи</div>
+                                                    <div class="manager-table-filter-params-window-props-list">
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="date1" checked="checked" /><span>06.06 <em>пт</em></span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="date2" /><span>07.06 <em>сб</em></span></label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="manager-table-filter-params-window-props">
-                                                <div class="manager-table-filter-params-window-title">Статус</div>
-                                                <div class="manager-table-filter-params-window-props-list">
-                                                    <div class="form-checkbox">
-                                                        <label><input type="checkbox" name="status1" /><span>опубликован</span></label>
+                                            <div class="manager-table-filter-params-window-col">
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">Уровень доверия</div>
+                                                    <div class="manager-table-filter-params-window-props-list">
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="trust1" checked="checked" /><span><div class="manager-table-filter-params-window-props-trust manager-table-filter-params-window-props-trust-1"></div>высокий</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="trust2" /><span><div class="manager-table-filter-params-window-props-trust manager-table-filter-params-window-props-trust-2"></div>средний</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="trust3" /><span><div class="manager-table-filter-params-window-props-trust manager-table-filter-params-window-props-trust-3"></div>низкий</span></label>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-checkbox">
-                                                        <label><input type="checkbox" name="status2" /><span>не опубликован</span></label>
+                                                </div>
+
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">Род деятельности</div>
+                                                    <div class="manager-table-filter-params-window-props-list">
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="type1" checked="checked" /><span>Крупносерийное производство</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="type2" /><span>Мелкосерийное производство</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="type3" /><span>Салон тканей и комплектующих</span></label>
+                                                        </div>
+                                                        <div class="form-checkbox">
+                                                            <label><input type="checkbox" name="type4" /><span>Деловая программа</span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="manager-table-filter-params-window-col">
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">Город</div>
+                                                    <div class="form-select form-select-ajax" data-link="ajax/cities.json">
+                                                        <select name="city" data-placeholder="Выберите город">
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="manager-table-filter-params-window-props">
+                                                    <div class="manager-table-filter-params-window-title">Количество встреч</div>
+                                                    <div class="manager-table-filter-params-window-count-meets">
+                                                        <div class="manager-table-filter-params-window-count-meets-from">с</div>
+                                                        <div class="manager-table-filter-params-window-count-meets-input"><div class="form-input"><input type="text" name="countFrom" value="1" /></div></div>
+                                                        <div class="manager-table-filter-params-window-count-meets-to">по</div>
+                                                        <div class="manager-table-filter-params-window-count-meets-input"><div class="form-input"><input type="text" name="countTo" value="3" /></div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -346,6 +401,12 @@
                                                     <span class="catalogue-item-country-item-hint">Д<span class="catalogue-item-country-item-hint-title">Давальческое</span></span>
                                                 </div>
                                                 <div class="manager-table-cell manager-table-cell-sep manager-table-cell-category">
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">женская одежда</span></span>
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">мужская одежда</span></span>
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">женская одежда</span></span>
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">мужская одежда</span></span>
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">женская одежда</span></span>
+                                                    <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">мужская одежда</span></span>
                                                     <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-1.svg" alt="" /><span class="catalogue-item-country-item-hint-title">женская одежда</span></span>
                                                     <span class="catalogue-item-country-item-hint"><img src="images/catalogue-category-2.svg" alt="" /><span class="catalogue-item-country-item-hint-title">мужская одежда</span></span>
                                                 </div>

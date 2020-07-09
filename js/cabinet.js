@@ -514,7 +514,13 @@ function meetAddConfirm() {
 $(window).on('load resize', function() {
     $('.manager-table-wrapper').each(function() {
         var curWrapper = $(this);
+        curWrapper.find('.manager-table-cell').removeAttr('style');
         if ($(window).width() > 1169) {
+            curWrapper.find('.manager-table-cell-participant').each(function() {
+                $(this).find('.manager-table-participant-text').css({'display': 'inline'});
+                $(this).css({'min-width': $(this).find('.manager-table-participant-text').width() + 30});
+                $(this).find('.manager-table-participant-text').removeAttr('style');
+            });
             curWrapper.mCustomScrollbar({
                 axis: 'x',
                 mouseWheel: {
