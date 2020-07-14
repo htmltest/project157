@@ -215,26 +215,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('body').on('change', '.window-online-date-list input', function(e) {
-        var curIndex = $('.window-online-date-list input').index($('.window-online-date-list input:checked'));
-        $('.window-online-time-content.active').removeClass('active');
-        $('.window-online-time-content .window-online-time-list input').removeClass('required');
-        $('.window-online-time-content').eq(curIndex).addClass('active');
-        $('.window-online-time-content').eq(curIndex).find('.window-online-time-list input').addClass('required');
-        $('.window-online-date h3 .error').removeClass('visible');
-        $('.window-online-date-current span').html('<strong>' + $('.window-online-date-list input:checked').attr('data-name') + '</strong> ' + $('.window-online-date-list input:checked').attr('data-day'));
-        $('.window-online-date-list .archive-card-days-date').removeClass('current');
-        $('.window-online-date-list input:checked').parents().filter('.archive-card-days-date').addClass('current');
-    });
-
-    $('body').on('change', '.window-online-time-list input', function(e) {
-        $('.window-online-time h3 .error').removeClass('visible');
-    });
-
-    $('body').on('change', '.window-online-type input', function(e) {
-        $('.window-online-type h3 .error').removeClass('visible');
-    });
-
     $('body').on('click', '.meet-add-submit-link', function(e) {
         if ($('.meet-add-form form').valid()) {
             $('.meet-add-form').addClass('loading');
@@ -253,7 +233,7 @@ $(document).ready(function() {
                 success: function(html) {
                     $('.meet-add-form').removeClass('loading');
                     $('.meet-add-form .message').remove();
-                    $('.meet-add-step-2').hide();
+                    $('.meet-add-step-2, .window-online-communication, .window-online-status').hide();
                     $('.meet-card-data-item-change').hide();
                     $('.meet-add-step-3').html(html);
                     $('.meet-add-step-3').show();
@@ -265,15 +245,74 @@ $(document).ready(function() {
                     $('.meet-add-form').append('<div class="message message-error"><div class="message-title">Ошибка</div><div class="message-text">Загрузка данных невозможна</div></div>');
                 }
             });
+        } else {
+            if ($('.form-input label.error:visible').length > 0) {
+                $('html, body').animate({'scrollTop': $('.form-input label.error:visible').eq(0).parent().offset().top - $('header').height() - 50});
+            }
         }
         e.preventDefault();
     });
 
     $('body').on('click', '.meet-add-back-link', function(e) {
-        $('.meet-add-step-2').show();
+        $('.meet-add-step-2, .window-online-communication, .window-online-status').show();
         $('.meet-card-data-item-change').show();
         $('.meet-add-step-3').hide();
         e.preventDefault();
+    });
+
+    $('body').on('click', '.comment-item-link', function(e) {
+        $(this).parent().toggleClass('open');
+        e.preventDefault();
+    });
+
+    var meetsScheduleTimer = null;
+    var meetsSchedulePeriod = 500;
+
+    var xhr = null;
+
+    $('body').on('mouseover', '.manager-table-cell-meet-cell .dashboard-zone-item-status', function(e) {
+        var curItem = $(this);
+        if (curItem.attr('data-url') !== undefined) {
+            $('.meets-schedule-window').remove();
+            $('.manager-table-cell-meet-cell .dashboard-zone-item-status').removeClass('loading');
+            curItem.addClass('loading');
+            if (xhr !== null) {
+                xhr.abort();
+            }
+            xhr = $.ajax({
+                type: 'POST',
+                url: curItem.attr('data-url'),
+                dataType: 'html',
+                cache: false,
+                success: function(html) {
+                    $('.wrapper').append('<div class="meets-schedule-window preload" style="top:' + $(curItem).offset().top + 'px; left:' + $(curItem).offset().left + 'px"><div class="meets-schedule-window-inner"></div></div>');
+                    curItem.removeClass('loading');
+                    $('.meets-schedule-window-inner').html(html);
+                    if ($('.meets-schedule-window-inner').offset().top < $(window).scrollTop()) {
+                        $('.meets-schedule-window-inner').addClass('to-bottom');
+                    }
+                    if ($('.meets-schedule-window-inner').offset().left + $('.meets-schedule-window-inner').outerWidth() > $(window).width()) {
+                        $('.meets-schedule-window-inner').addClass('to-left');
+                    }
+                    $('.meets-schedule-window').removeClass('preload');
+                }
+            });
+        }
+        window.clearTimeout(meetsScheduleTimer);
+        meetsScheduleTimer = null;
+    });
+
+    $('body').on('mouseout', '.manager-table-cell-meet-cell .dashboard-zone-item-status', function(e) {
+        meetsScheduleTimer = window.setTimeout(function() { $('.meets-schedule-window').remove(); $('.manager-table-cell-meet-cell .dashboard-zone-item-status').removeClass('loading'); }, meetsSchedulePeriod);
+    });
+
+    $('body').on('mouseover', '.meets-schedule-window', function(e) {
+        window.clearTimeout(meetsScheduleTimer);
+        meetsScheduleTimer = null;
+    });
+
+    $('body').on('mouseout', '.meets-schedule-window', function(e) {
+        meetsScheduleTimer = window.setTimeout(function() { $('.meets-schedule-window').remove(); $('.manager-table-cell-meet-cell .dashboard-zone-item-status').removeClass('loading'); }, meetsSchedulePeriod);
     });
 
 });
@@ -482,6 +521,9 @@ function lkmMeetAddFilterUpdate() {
                     pagerHTML += '<a href="#" class="pager-next"></a></div>';
                 }
                 $('.lkm-exponent-add-wrapper .pager').html(pagerHTML);
+                if ($('.meet-card-data-item-exponent input').length > 0 && $('.meet-card-data-item-exponent input').val() != '') {
+                    $('.lkm-exponent-add-exponent input[value="' + $('.meet-card-data-item-exponent input').val() + '"]').prop('checked', true);
+                }
             } else {
                 $('.lkm-exponent-add-wrapper').removeClass('loading');
                 $('.lkm-exponent-add-wrapper .message').remove();
@@ -589,6 +631,9 @@ function lkmMeetAddFilterUpdateVisitor() {
                     pagerHTML += '<a href="#" class="pager-next"></a></div>';
                 }
                 $('.lkm-visitor-add-wrapper .pager').html(pagerHTML);
+                if ($('.meet-card-data-item-visitor input').length > 0 && $('.meet-card-data-item-visitor input').val() != '') {
+                    $('.lkm-visitor-add-visitor input[value="' + $('.meet-card-data-item-visitor input').val() + '"]').prop('checked', true);
+                }
             } else {
                 $('.lkm-visitor-add-wrapper').removeClass('loading');
                 $('.lkm-visitor-add-wrapper .message').remove();
