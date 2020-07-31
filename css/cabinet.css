@@ -1542,3 +1542,96 @@ h1+.meet-card-btns {margin-top:16px}
 
 .meet-add-content h3 .error {display:none; font-size:13px; line-height:19px; color:#df0e0e; font-weight:normal}
 .meet-add-content h3 .error.visible {display:inline; margin:0}
+
+.meets-confirm {margin:60px auto 0 auto; max-width:550px}
+.meets-confirm-btns {margin:18px 0 0 0}
+.meets-confirm-btns::after {content:""; display:block; clear:both}
+.meets-confirm-status {margin:40px 0 0 0}
+.meets-confirm-status .message {margin:0; padding:38px 20px; text-align:center}
+.meets-confirm-status .message-title {float:none; padding:0; width:auto; font-size:20px; line-height:30px; margin:0}
+.fonts-loaded .meets-confirm-status .message-title {font-family:FiraSans, sans-serif}
+.meets-confirm-status .message-title::before {position:relative; left:auto; top:auto; display:inline-block; vertical-align:middle; margin:-4px 20px 0 0}
+.meets-confirm h3 {margin:40px 0 12px 0}
+.meets-confirm .meet-card-info {float:none; width:auto; margin:12px 0 0 0; overflow:hidden; position:relative}
+.meets-confirm .meet-card-date-title-mobile {display:none}
+.meets-confirm .meet-card-date em {display:none}
+.meets-confirm .meet-card-data {margin:40px 0 0 0}
+.meets-confirm .meet-card-data-item {float:none; width:auto; padding:0; margin:40px 0 0 0}
+.meets-confirm .meet-card-data-header h3 {margin:0}
+.meets-confirm .meet-card-data-country em {font-style:normal}
+.meets-confirm .meet-add-step-confirm+.meet-add-step-confirm {margin:40px 0 0 0}
+.meets-confirm .meet-add-step-confirm-label {width:205px}
+.meets-confirm .faq-feedback {margin:40px 0 0 0}
+.meets-confirm .faq-feedback-text {max-width:390px}
+.meets-confirm .forgot-help {margin:24px -66px 0 0}
+.meets-confirm .forgot-help::after {content:""; display:block; clear:both}
+.meets-confirm .forgot-help-contacts {float:left; width:377px; text-align:left}
+.meets-confirm .forgot-help-contacts .contacts-item {padding:0; width:100%}
+.meets-confirm .forgot-help-feedback {float:right; margin:24px 0 0 0; width:200px}
+.meets-confirm .forgot-help-feedback-title {color:#313131}
+.meets-confirm .forgot-help-feedback-btn {margin:13px 0 0 0}
+.meets-confirm .forgot-help-feedback-btn .btn {padding:0; width:100%}
+
+@media screen and (max-width:1169px) {
+    .meets-confirm {margin:64px auto 0 auto}
+    .meets-confirm h1 {margin-top:64px}
+    .meets-confirm-btns {margin:25px 0 0 0}
+    .meets-confirm .manager-table-action-btn {width:53px; margin:0 0 0 30px}
+    .meets-confirm .manager-table-action-btn .btn {width:53px; height:53px; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+    .meets-confirm .manager-table-action-btn .btn img {margin:0; display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); width:28px}
+    .meets-confirm-status {margin:38px 0 0 0}
+    .meets-confirm-status .message {padding:25px 20px 30px 20px}
+    .meets-confirm-status .message-title {font-weight:500}
+    .meets-confirm .meet-card-info {margin:18px -20px 0 -20px; padding:30px 20px 0 20px; border-top-width:8px; border-bottom:none}
+    .meets-confirm .meet-card-date {float:none; margin:0; padding:20px 0 0 0; background:none; border-top:1px solid #e8e8e8; font-weight:600; font-size:20px; line-height:30px; color:#000}
+    .meets-confirm .meet-card-date-title-mobile {display:block; margin:0 0 3px 0; font-weight:300; font-size:20px; line-height:30px; color:#000}
+    .meets-confirm .meet-card-date em {display:inline; font-style:normal; font-weight:300}
+    .meets-confirm .meet-card-time {float:none; margin:23px 0 0 0; padding:20px 0 0 0; background:none; border-top:1px solid #e8e8e8; font-weight:600; font-size:20px; line-height:30px; color:#000}
+    .meets-confirm .meet-card-communication {float:none; margin:23px 0 0 0; padding:20px 0 0 0; background:none; border-top:1px solid #e8e8e8; font-weight:600; font-size:20px; line-height:30px; color:#000}
+    .meets-confirm .meet-card-company-info-props {float:none; margin:23px 0 0 0; padding:20px 0 33px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8}
+    .meets-confirm .meet-card-company-info-props-title {width:auto; font-size:20px; line-height:30px; color:#000; font-weight:300; margin:0 0 4px 0}
+    .meets-confirm .meet-card-company-info-props-value {margin:0}
+    .meets-confirm .meet-card-company-info-props-communication-title {font-weight:600}
+    .meets-confirm .meet-card-company-info-props-communication-info span {display:block; margin:0}
+    .meets-confirm .meet-card-data {margin:49px -20px 50px -20px; padding:0 20px 32px 20px; border-bottom:1px solid #b9b9b9}
+    .meets-confirm .meet-card-data-header {border-bottom-width:8px; padding:0 20px 17px 20px; margin:0 -20px}
+    .meets-confirm .meet-card-data-header h3 {float:none; margin:0}
+    .meets-confirm .meet-card-data-header-link {float:none; margin:4px 0 0 0; padding:0; font-size:18px; line-height:27px}
+    .meets-confirm .meet-card-data-container {border:none}
+    .meets-confirm .meet-card-data-info {padding:0; border:none}
+    .meets-confirm .meet-card-data-company {float:none; width:auto; display:block; padding:22px 0 0 0}
+    .meets-confirm .meet-card-data-company-logo {display:block; width:auto}
+    .meets-confirm .meet-card-data-company-logo img {max-width:72px; max-height:62px}
+    .meets-confirm .meet-card-data-company-info {display:block; padding:0; margin:14px 0 0 0}
+    .meets-confirm .meet-card-data-company-title {font-size:20px; line-height:30px}
+    .meets-confirm .meet-card-data-company-brands {float:left; font-size:18px; line-height:27px; margin:0 12px 0 0}
+    .meets-confirm .meet-card-data-countries {float:none; width:auto}
+    .meets-confirm .meet-card-data-country {float:left; font-size:18px; line-height:27px; margin:0 0 0 8px}
+    .meets-confirm .meet-card-data-country img {height:16px; margin:-4px 0 0 0}
+    .meets-confirm .meet-card-data-country em {display:none}
+    .meets-confirm .catalogue-item-country-item-hint {font-size:18px; display:inline; vertical-align:middle}
+    .meets-confirm .meet-card-data-props {float:left; width:100%; padding:0}
+    .meets-confirm .meet-card-data-prop {float:none; margin:18px 0 0 0; max-width:none}
+    .meets-confirm .meet-card-data-prop:first-child {margin:18px 0 0 0}
+    .meets-confirm .meet-card-data-prop:nth-child(1) {max-width:none}
+    .meets-confirm .meet-card-data-prop:nth-child(2) {max-width:none; margin:30px 0 0 0}
+    .meets-confirm .meet-card-data-prop:nth-child(3) {max-width:none; margin:23px 0 0 0}
+    .meets-confirm .meet-card-data-prop-title {text-transform:uppercase; font-size:15px; line-height:23px; letter-spacing:0.03em; font-weight:normal}
+    .meets-confirm .meet-card-data-prop-value {margin:5px 0 0 0; font-weight:normal}
+    .meets-confirm .meet-card-data-prop-categories {margin:-11px 0 0 -18px}
+    .meets-confirm .meet-card-data-prop-categories .catalogue-item-country-item-hint {margin:18px 0 0 18px}
+    .meets-confirm .meet-card-data-prop-categories img {height:24px}
+    .meets-confirm .meet-add-step-confirm {border-top:8px solid rgba(41, 132, 223, 0.2); border-bottom:1px solid #b9b9b9; margin:18px -20px 0 -20px; padding:30px 20px 25px 20px; display:block; width:auto}
+    .meets-confirm .meet-add-step-confirm-row {display:block; padding:0; margin:23px 0 0 0}
+    .meets-confirm .meet-add-step-confirm-row:first-child {margin:0}
+    .meets-confirm .meet-add-step-confirm-label {border:none; font-weight:normal; font-size:15px; line-height:23px; color:#81a2b0; letter-spacing:0.03em; padding:0; width:auto; text-transform:uppercase; display:block}
+    .meets-confirm .meet-add-step-confirm-value {margin:5px 0 0 0; border:none; padding:0; width:auto; font-weight:normal; display:block}
+    .meets-confirm .meet-add-step-confirm+.meet-add-step-confirm {margin:50px -20px 0 -20px}
+    .meets-confirm .faq-feedback {margin:50px 0 0 0}
+    .meets-confirm .faq-feedback-text {max-width:none}
+    .meets-confirm .forgot-help {margin:24px 0 0 0}
+    .meets-confirm .forgot-help-contacts {float:none; width:auto}
+    .meets-confirm .forgot-help-feedback {float:none; margin:40px 0 0 0; width:auto}
+    .meets-confirm .forgot-help-feedback-title {display:none}
+    .meets-confirm .forgot-help-feedback-btn .btn::after {display:inline-block}
+}
