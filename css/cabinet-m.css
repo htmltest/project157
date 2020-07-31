@@ -259,7 +259,7 @@ h1+.meet-card-data {margin-top:48px}
 .meet-add-step-1-btn {margin:15px 0 0 0}
 .meet-add-step-1-btn .btn {padding:0 20px}
 
-.window-meet-add-exponent {width:660px}
+.window-meet-add-exponent {width:780px}
 .window-meet-add-exponent .window-body {position:relative; z-index:1}
 
 .lkm-exponent-add-wrapper.loading {position:relative}
@@ -290,29 +290,31 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-exponent-add-exponent {display:table-row; width:auto; padding:0; cursor:pointer}
 .lkm-exponent-add-exponent input {display:none}
 .lkm-exponent-add-exponent-radiobox {display:table-cell; vertical-align:middle; width:37px; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
-.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-radiobox::after,
+.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-radiobox {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox::before {content:""; display:block; width:19px; height:19px; background:url(../images/meet-add-company-radiobox.svg) no-repeat}
 .lkm-exponent-add-exponent-info {display:table-cell; vertical-align:middle; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
-.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-info::after,
+.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-info {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent-info-inner {display:table}
 .lkm-exponent-add-exponent-logo {display:table-cell; vertical-align:middle; width:73px; text-align:center}
 .lkm-exponent-add-exponent-logo-inner {width:73px; line-height:0}
+.lkm-exponent-add-exponent-logo-inner img {max-height:45px}
 .lkm-exponent-add-exponent-text {display:table-cell; vertical-align:middle; padding:0 30px}
 .lkm-exponent-add-exponent-source {display:table-cell; vertical-align:middle; width:65px; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative; font-size:14px; line-height:21px}
-.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-source::after,
+.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-source {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent-category {display:table-cell; vertical-align:middle; width:155px; padding:15px 20px 15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
-.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-category::after,
+.lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-category {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source+.lkm-exponent-add-exponent-category::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent-category > span {margin:4px 8px 4px 0}
+.lkm-exponent-add-exponent-category img {height:18px}
 
 .meet-card-data-item-change {display:none; margin:10px 0 0 0; font-size:14px; line-height:21px; text-align:right}
 .meet-card-data-item-change a {color:#272727; border-bottom:1px dashed #bababa; text-decoration:none}
 .meet-card-data-item-change a:hover {border-bottom-color:transparent}
 
-.window-meet-add-visitor {width:763px}
+.window-meet-add-visitor {width:780px}
 .window-meet-add-visitor .window-body {position:relative; z-index:1}
 
 .lkm-visitor-add-wrapper.loading {position:relative}
@@ -346,17 +348,17 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-visitor-add-visitor {display:table-row; width:auto; padding:0; cursor:pointer}
 .lkm-visitor-add-visitor input {display:none}
 .lkm-visitor-add-visitor-radiobox {display:table-cell; vertical-align:top; width:37px; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
-.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-radiobox::after,
+.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-radiobox {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox::before {content:""; display:block; width:19px; height:19px; background:url(../images/meet-add-company-radiobox.svg) no-repeat}
 .lkm-visitor-add-visitor-info {display:table-cell; vertical-align:top; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative; white-space:nowrap}
-.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-info::after,
+.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-info {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor-city {display:table-cell; vertical-align:top; padding:15px 0 15px 30px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative; font-size:14px; line-height:21px}
-.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-city::after,
+.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-city {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor-delegate {display:table-cell; vertical-align:top; padding:15px 0 15px 30px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
-.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-delegate::after,
+.lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-delegate {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city+.lkm-visitor-add-visitor-delegate::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city+.lkm-visitor-add-visitor-delegate+.lkm-visitor-add-visitor-delegate::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 
