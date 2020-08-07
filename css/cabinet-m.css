@@ -309,6 +309,9 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source+.lkm-exponent-add-exponent-category::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent-category > span {margin:4px 8px 4px 0}
 .lkm-exponent-add-exponent-category img {height:18px}
+.lkm-exponent-add-exponent .manager-table-participant-text-countries {white-space:nowrap}
+.lkm-exponent-add-exponent .manager-table-participant-text-countries img {height:15px}
+.lkm-exponent-add-exponent .manager-table-participant-text .catalogue-item-country-item:first-child {margin:0}
 
 .meet-card-data-item-change {display:none; margin:10px 0 0 0; font-size:14px; line-height:21px; text-align:right}
 .meet-card-data-item-change a {color:#272727; border-bottom:1px dashed #bababa; text-decoration:none}
@@ -399,7 +402,7 @@ h1+.meet-card-data {margin-top:48px}
 
 .meet-card-data+.tabs {margin-top:63px}
 
-.faq-card-list {margin:42px 0 0 0; padding:0 0 38px 0}
+.faq-card-list {margin:42px 0 0 0; padding:0 0 38px 0; max-width:1016px}
 .faq-card-list+.faq-card-list {margin:0; border-top:2px solid #74bddc}
 .faq-card-list-item {padding:38px 0 0 0}
 .faq-card-list-item:first-child {border-top:none}

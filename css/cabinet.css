@@ -1635,3 +1635,12 @@ h1+.meet-card-btns {margin-top:16px}
     .meets-confirm .forgot-help-feedback-title {display:none}
     .meets-confirm .forgot-help-feedback-btn .btn::after {display:inline-block}
 }
+
+.meets-confirm .faq-card-list {border-bottom:1px solid #e8e8e8}
+.meets-confirm .faq-card-list .faq-card-list-item {border-top:1px solid #e8e8e8; margin:40px 0 0 0}
+.meets-confirm .faq-card-list .faq-card-list-item+.faq-card-list-item {margin:30px 0 0 0}
+
+@media screen and (max-width:1169px) {
+    .meets-confirm .faq-card-list .faq-card-list-item {margin:30px 0 0 0}
+    .meets-confirm .faq-card-list .faq-card-list-item+.faq-card-list-item {margin:30px 0 0 0}
+}
