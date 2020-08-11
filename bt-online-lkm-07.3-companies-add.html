@@ -250,26 +250,103 @@
                             <!-- cabinet form -->
                             <div class="cabinet-form">
                                 <form action="#" method="post">
-                                    <div class="form-input"><span>Название компании<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
-                                    <div class="form-input"><span>Город<em>*</em></span><input type="text" name="city" value="" class="required" /></div>
+                                    <h3>Данные компании</h3>
+                                    <div class="form-input"><span>Название компании <em>*</em></span><input type="text" name="company" value="" class="required" /></div>
+                                    <div class="form-input"><span>Город <em>*</em></span><input type="text" name="city" value="" class="required" /></div>
                                     <div class="form-select">
-                                        <select name="type" data-placeholder="Род деятельности*" class="required">
+                                        <select name="type" data-placeholder="Род деятельности *" class="required">
                                             <option value=""></option>
-                                            <option value="1">Фабрика</option>
-                                            <option value="2">Завод</option>
+                                            <option value="1">Вариант 1</option>
+                                            <option value="2">Вариант 2</option>
+                                            <option value="3">Вариант 3</option>
+                                            <option value="4">Вариант 4</option>
                                         </select>
                                     </div>
                                     <div class="form-select">
-                                        <select name="form" data-placeholder="Форма организации*" class="required">
+                                        <select name="typeCompany" data-placeholder="Форма организации *" class="required">
                                             <option value=""></option>
-                                            <option value="1">ООО</option>
-                                            <option value="2">ИП</option>
+                                            <option value="1">Вариант 1</option>
+                                            <option value="2">Вариант 2</option>
+                                            <option value="3">Вариант 3</option>
+                                            <option value="4">Вариант 4</option>
                                         </select>
                                     </div>
-                                    <div class="form-input"><span>ИНН<em>*</em></span><input type="text" name="inn" value="" class="required" /></div>
-                                    <div class="form-input"><span>Сайт компании или аккаунт в соцсетях<em>*</em></span><input type="text" name="url" value="" class="required url" /></div>
-                                    <div class="form-submit"><button type="submit" class="btn btn-mini">Добавить</button></div>
+                                    <div class="form-input"><span>ИНН <em>*</em></span><input type="text" name="inn" value="" class="required inncheck" /></div>
+                                    <div class="form-input"><span>Сайт компании или аккаунт в соц сетях <em>*</em></span><input type="text" name="url" value="" class="required" /></div>
+
+                                    <h3>Представитель</h3>
+                                    <div class="form-input"><span>ФИО <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                    <div class="form-input"><span>Мобильный телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /><div class="form-hint">В формате +7 495 111-22-33</div></div>
+                                    <div class="form-input"><span>Адрес электронной почты <em>*</em></span><input type="text" name="email" value="" class="required email emailcheck notEmailEquals" /></div>
+                                    <div class="form-input"><span>Должность <em>*</em></span><input type="text" name="post" value="" class="required" /></div>
+
+                                    <h3>Записаться на встречи</h3>
+
+                                    <div class="registration-zones">
+                                        <div class="form-checkbox">
+                                            <label>
+                                                <input type="checkbox" name="zone1" />
+                                                <span>
+                                                    Онлайн-встречи Bee Online 2020
+                                                    <div class="registration-zones-hint">
+                                                        <div class="registration-zones-hint-icon">?</div>
+                                                        <div class="registration-zones-hint-text">Семинары и мастер-классы экспертов индустрии</div>
+                                                    </div>
+                                                    <div class="registration-zones-checkbox-notice">Перед предоставлением доступа в этот раздел заявка будет проверятся несколько дней!</div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <h3>Представители</h3>
+                                    <div class="registration-list-title">Вы можете добавить других представителей компании</div>
+                                    <div class="registration-list"></div>
+                                    <div class="registration-list-btn"><a href="#" class="btn btn-mini"><img src="images/btn-add.svg" alt="" />Добавить представителя</a></div>
+
+                                    <h3>Рекомендации</h3>
+                                    <div class="registration-list-title">Вы можете добавить компанию, которая может дать рекомендацию для вас</div>
+                                    <div class="recommend-list"></div>
+                                    <div class="registration-recommend-btn"><a href="#" class="btn btn-mini"><img src="images/btn-add.svg" alt="" />Добавить рекомендацию</a></div>
+
+                                    <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a> и<br /> <a href="#">пользовательского соглашения</a></span></label></div>
+                                    <div class="form-submit"><button type="submit" class="btn">Зарегистироваться</button></div>
                                 </form>
+
+                                <div class="list-template">
+                                    <div class="registration-item">
+                                        <div class="registration-item-header">
+                                            <div class="registration-item-header-title">Представитель _COUNTER_</div>
+                                            <div class="registration-item-header-remove"><a href="#"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6 1L1 10.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1L10.6 10.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                                        </div>
+                                        <div class="form-input"><span>ФИО <em>*</em></span><input type="text" name="list[_ID_][name]" value="" class="required" /></div>
+                                        <div class="form-input"><span>Должность <em>*</em></span><input type="text" name="list[_ID_][post]" value="" class="required" /></div>
+                                        <div class="form-row">
+                                            <div class="form-row-field">
+                                                <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="list[_ID_][phone]" value="" class="required phoneRU" /></div>
+                                            </div>
+                                            <div class="form-row-field">
+                                                <div class="form-input"><span>Эл. Почта <em>*</em></span><input type="text" name="list[_ID_][email]" value="" class="required email notEmailEquals" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="recommend-template">
+                                    <div class="registration-item">
+                                        <div class="registration-item-header">
+                                            <div class="registration-item-header-remove"><a href="#"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6 1L1 10.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1L10.6 10.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+                                        </div>
+                                        <div class="form-input"><span>Компания <em>*</em></span><input type="text" name="recommend[_ID_][company]" value="" class="required" /></div>
+                                        <div class="form-row">
+                                            <div class="form-row-field">
+                                                <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="recommend[_ID_][phone]" value="" class="required phoneRU" /></div>
+                                            </div>
+                                            <div class="form-row-field">
+                                                <div class="form-input"><span>Эл. Почта <em>*</em></span><input type="text" name="recommend[_ID_][email]" value="" class="required email" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- cabinet form END -->
 

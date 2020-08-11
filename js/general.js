@@ -420,6 +420,46 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.registration-item-header-remove a', function(e) {
+        $(this).parents().filter('.registration-item').remove();
+        if ($('.registration .recommend-list .registration-item').length == 0) {
+            $('.registration .registration-recommend-btn').removeClass('hidden');
+        }
+        if ($('.window .recommend-list .registration-item').length == 0) {
+            $('.window .registration-recommend-btn').removeClass('hidden');
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.registration-list-btn a', function(e) {
+        var curForm = $(this).parents().filter('form');
+        var newHTML = curForm.parent().find('.list-template').html();
+        var newID = curForm.find('.registration-list .registration-item').length;
+        newHTML = newHTML.replace(/_COUNTER_/g, newID + 1);
+        newHTML = newHTML.replace(/_ID_/g, newID);
+        curForm.find('.registration-list').append(newHTML);
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.registration-recommend-btn a', function(e) {
+        var curForm = $(this).parents().filter('form');
+        var newHTML = curForm.parent().find('.recommend-template').html();
+        var newID = curForm.find('.recommend-list .registration-item').length;
+        newHTML = newHTML.replace(/_ID_/g, newID);
+        curForm.find('.recommend-list').append(newHTML);
+        if ($('.registration .recommend-list .registration-item').length == 0) {
+            $('.registration .registration-recommend-btn').removeClass('hidden');
+        } else {
+            $('.registration .registration-recommend-btn').addClass('hidden');
+        }
+        if ($('.window .recommend-list .registration-item').length == 0) {
+            $('.window .registration-recommend-btn').removeClass('hidden');
+        } else {
+            $('.window .registration-recommend-btn').addClass('hidden');
+        }
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {
