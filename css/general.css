@@ -367,8 +367,8 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
 }
 
 .tabs-container {position:relative; margin:-26px 0 0 0}
-.tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, transform 0.75s ease; transform:translateY(20px)}
-.tabs-content.active {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0)}
+.tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, padding-top 0.75s ease; padding-top:20px}
+.tabs-content.active {position:relative; left:auto; top:auto; opacity:1; padding-top:0}
 .tabs-content-title {display:none}
 
 @media screen and (max-width:1169px) {
@@ -435,7 +435,7 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
 }
 
 .logo {float:left; width:210px; height:46px; background:url(../images/logo.svg) no-repeat; margin:20px 0 0 0; position:relative; background-size:100% auto; transition:all 0.5s}
-.header-fixed .logo {width:116px; height:28px; margin:18px 0 0 0}
+.header-fixed .logo {width:173px; height:38px; margin:13px 0 0 0}
 .logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 
 @media screen and (max-width:1169px) {
@@ -450,6 +450,9 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
 .header-menu > ul > li:first-child {margin:0}
 .header-menu > ul > li::before {display:none}
 .header-menu > ul > li > a {display:block; height:28px; padding:0 8px; color:#282828; text-decoration:none; border-radius:2px; position:relative}
+.header-menu > ul > li > a.header-menu-conf {border:1px solid #e63946; line-height:26px}
+.header-menu > ul > li > a.header-menu-conf svg {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0}
+.header-menu > ul > li > a.header-menu-conf path {stroke:#e63946}
 .header-menu > ul > li.with-submenu+li {margin-left:6px}
 .header-menu > ul > li.with-submenu > a::after {content:""; display:inline-block; vertical-align:middle; width:10px; height:6px; background:url(../images/with-submenu.svg) no-repeat; margin:-2px 0 0 6px}
 .header-menu > ul > li.active > a {background:#cce8f4; font-weight:normal}

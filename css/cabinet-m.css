@@ -150,7 +150,7 @@ h1+.meet-card-data {margin-top:48px}
 .meet-card-data-countries {float:right; width:170px}
 .meet-card-data-country {margin:3px 0 0 0; font-size:14px; line-height:23px; white-space:nowrap; position:relative}
 .meet-card-data-country:first-child {margin:0}
-.meet-card-data-country img {display:inline-block; vertical-align:middle; height:18px; max-width:none; margin:-2px 9px 0 0}
+.meet-card-data-country img {display:inline-block; vertical-align:middle; height:15px; max-width:none; margin:-2px 9px 0 0}
 .meet-card-data-country .catalogue-item-country-item-hint-title {left:auto; right:100%; margin-left:0; margin-right:11px}
 .meet-card-data-country .catalogue-item-country-item-hint-title::before {left:auto; right:-8px; transform:rotate(45deg)}
 .meet-card-data-props {padding:13px 0 19px 0}
@@ -161,7 +161,7 @@ h1+.meet-card-data {margin-top:48px}
 .meet-card-data-prop:nth-child(1) {max-width:calc(100% - 310px)}
 .meet-card-data-prop:nth-child(2) {max-width:90px}
 .meet-card-data-prop:nth-child(3) {max-width:140px}
-.meet-card-data-prop-value {margin:6px 0 0 0}
+.meet-card-data-prop-value {margin:6px 0 0 0; font-size:14px; line-height:21px}
 .meet-card-data-prop-categories {font-size:0; line-height:0; letter-spacing:-1px; margin:-11px 0 0 -12px}
 .meet-card-data-prop-categories img {height:18px}
 .meet-card-data-prop-categories .catalogue-item-country-item-hint {display:inline-block; vertical-align:top; margin:12px 0 0 12px}
@@ -265,9 +265,11 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-exponent-add-wrapper.loading {position:relative}
 .lkm-exponent-add-wrapper.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center; z-index:2}
 
+.lkm-exponent-add-ctrl .manager-table-filter {width:auto}
+.lkm-exponent-add-ctrl .manager-table-filter::after {display:none}
 .lkm-exponent-add-ctrl::after {content:""; display:block; clear:both}
-.lkm-exponent-add-ctrl .support-search {margin:0}
-.lkm-exponent-add-ctrl .support-search-window {position:relative; right:auto; top:auto; width:434px; opacity:1}
+.lkm-exponent-add-ctrl .support-search {margin:0; float:right}
+.lkm-exponent-add-ctrl .support-search-window {position:relative; right:auto; top:auto; width:434px; opacity:1; padding:0}
 .lkm-exponent-add-ctrl .support-search-window-input input {top:auto; border:1px solid #d9d9d9; height:40px; font-weight:normal; padding:7px 40px 7px 20px}
 .lkm-exponent-add-ctrl .support-search-window-input input::-webkit-input-placeholder {opacity:1; color:#808080}
 .lkm-exponent-add-ctrl .support-search-window-input input::-moz-placeholder {opacity:1; color:#808080}
@@ -327,9 +329,11 @@ h1+.meet-card-data {margin-top:48px}
 .meet-add-form.loading {position:relative}
 .meet-add-form.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center; z-index:2}
 
+.lkm-visitor-add-ctrl .manager-table-filter {width:auto}
+.lkm-visitor-add-ctrl .manager-table-filter::after {display:none}
 .lkm-visitor-add-ctrl::after {content:""; display:block; clear:both}
-.lkm-visitor-add-ctrl .support-search {margin:0}
-.lkm-visitor-add-ctrl .support-search-window {position:relative; right:auto; top:auto; width:434px; opacity:1}
+.lkm-visitor-add-ctrl .support-search {margin:0; float:right}
+.lkm-visitor-add-ctrl .support-search-window {position:relative; right:auto; top:auto; width:434px; opacity:1; padding:0}
 .lkm-visitor-add-ctrl .support-search-window-input input {top:auto; border:1px solid #d9d9d9; height:40px; font-weight:normal; padding:7px 40px 7px 20px}
 .lkm-visitor-add-ctrl .support-search-window-input input::-webkit-input-placeholder {opacity:1; color:#808080}
 .lkm-visitor-add-ctrl .support-search-window-input input::-moz-placeholder {opacity:1; color:#808080}

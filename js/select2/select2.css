@@ -5,6 +5,11 @@
   font-weight: normal;
   position: relative;
   vertical-align: middle; }
+  @media screen and (min-width:1170px) {
+    .manager-table-filter-open .select2-container {
+      font-size: 13px;
+      line-height: 20px; }
+  }
   @media screen and (max-width:1169px) {
     .select2-container {
       font-size: 20px;
@@ -17,6 +22,10 @@
     height: 60px;
     user-select: none;
     -webkit-user-select: none; }
+  @media screen and (min-width:1170px) {
+    .manager-table-filter-open .select2-container .select2-selection--single {
+      height: 30px; }
+  }
       @media screen and (max-width:1169px) {
         .select2-container .select2-selection--single {
           height: 70px; }
@@ -87,6 +96,10 @@
   padding: 18px 48px 18px 19px;
   user-select: none;
   -webkit-user-select: none; }
+  @media screen and (min-width:1170px) {
+    .manager-table-filter-open .select2-results__option {
+      padding:4px 36px 5px 14px; }
+  }
   @media screen and (max-width:1169px) {
     .select2-results__option {
       border-color: #b8b8b8}
@@ -105,6 +118,15 @@
     position: absolute;
     right: 14px;
     top: 19px; }
+    @media screen and (min-width:1170px) {
+      .manager-table-filter-open .select2-results__option::after {
+        width: 16px;
+        height: 16px;
+        background: url(selected-filter.svg) no-repeat;
+        top: 7px;
+        right: 10px;
+        }
+    }
     @media screen and (max-width:1169px) {
       .select2-results__option::after {
         width: 24px;
@@ -142,6 +164,14 @@
   .select2-search--dropdown .select2-search__field {
     position:relative; border:1px solid #d9d9d9; font:16px/24px Lato, sans-serif; color:#000; vertical-align:top; margin:0; padding:17px 19px 17px 19px; width:100%; height:60px; box-sizing:border-box; outline:none; border-radius:1px; background:#fff; -webkit-appearance:none; transition:border-color 0.2s;
     box-sizing: border-box; }
+    @media screen and (min-width:1170px) {
+      .manager-table-filter-open .select2-search--dropdown .select2-search__field {
+        font-size: 13px;
+        line-height: 20px;
+        height: 30px;
+        padding: 5px 14px;
+        }
+    }
     .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
       -webkit-appearance: none; }
   .select2-search--dropdown.select2-search--hide {
