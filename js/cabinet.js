@@ -164,7 +164,7 @@ $(document).ready(function() {
 
     $('body').on('click', '.manager-table-filter-param span', function() {
         var curId = $(this).attr('data-id');
-        var curField = $('.manager-table-filter-params-window *[data-id="' + curId + '"]');
+        var curField = $('.manager-table-filter-params-window *[data-id="' + curId + '"]').eq(0);
         if (curField.parents().filter('.form-checkbox').length > 0) {
             curField.prop('checked', false);
             curField.trigger('change');
