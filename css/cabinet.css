@@ -804,7 +804,7 @@ h1+.meet-card-btns {margin-top:16px}
 
 .manager-table-ctrl {margin:23px 0 45px 0}
 .manager-table-ctrl::after {content:""; display:block; clear:both}
-.manager-table-filter {float:left; position:relative; width:calc(100% - 300px)}
+.manager-table-filter {float:left; position:relative; width:200px}
 .manager-table-filter-link {float:left; width:126px; height:41px; border:1px solid #d0d0d0; text-align:center; border-radius:2px; font-size:12px; color:#000; font-weight:normal; line-height:41px; cursor:pointer; letter-spacing:0.05em; text-transform:uppercase; transition:all 0.2s}
 .manager-table-filter-link:hover {border-color:#008cc9}
 .manager-table-filter-link::before {content:""; display:inline-block; vertical-align:middle; width:12px; height:11px; background:url(../images/manager-table-filter-link.svg) no-repeat; margin:-2px 10px 0 0}
@@ -922,6 +922,9 @@ h1+.meet-card-btns {margin-top:16px}
 .manager-table-filter-params-window-count-meets-input {float:left; width:48px}
 .manager-table-filter-params-window-count-meets-input .form-input {margin:0}
 .manager-table-filter-params-window-count-meets-input .form-input input {height:30px; font-size:13px; line-height:20px; color:#404040; text-align:center; padding:7px 0 3px 0}
+
+.manager-table-filter-params-window-input .form-input {margin:0}
+.manager-table-filter-params-window-input .form-input input {height:30px; font-size:13px; line-height:20px; color:#404040; padding:6px 10px 4px 10px}
 
 .manager-filter-select {margin:4px 0 0 0; position:relative; max-width:249px}
 .manager-filter-select.open {z-index:99}

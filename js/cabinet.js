@@ -158,6 +158,10 @@ $(document).ready(function() {
         filterUpdate();
     });
 
+    $('body').on('change', '.manager-table-filter-params-window-input .form-input input', function(e) {
+        filterUpdate();
+    });
+
     $('body').on('change', '.manager-table-filter .form-select select', function(e) {
         filterUpdate();
     });
@@ -176,6 +180,10 @@ $(document).ready(function() {
         if (curField.hasClass('manager-table-filter-params-window-count-meets')) {
             curField.find('input').val('');
             curField.find('input').trigger('change');
+        }
+        if (curField.parents().filter('.manager-table-filter-params-window-input').length == 1) {
+            curField.val('');
+            curField.trigger('change');
         }
         if (curField.parents().filter('.manager-filter-select-list').length == 1) {
             curField.parents().filter('.manager-filter-select-list').find('input').prop('checked', false);
@@ -789,6 +797,18 @@ function filterUpdate() {
                 newText += ', ';
             }
             newText += curSelect.find('option:selected').text();
+        }
+    }
+    for (var i = 0; i < $('.manager-table-filter-params-window-input').length; i++) {
+        var curInput = $('.manager-table-filter-params-window-input').eq(i).find('input');
+        id++;
+        curInput.attr('data-id', id);
+        if (curInput.val() != '') {
+            newHTML += '<div class="manager-table-filter-param">' + curInput.val() + '<span data-id="' + id + '"><svg width="7" height="7" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4.5 4.5L8 1" stroke-width="1.2"/><path d="M8 8L4.5 4.5L1 8" stroke-width="1.2"/></svg></span></div>';
+            if (newText != '') {
+                newText += ', ';
+            }
+            newText += curInput.val();
         }
     }
     for (var i = 0; i < $('.manager-table-filter .manager-filter-select-list input').length; i++) {
