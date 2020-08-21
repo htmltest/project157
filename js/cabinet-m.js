@@ -458,27 +458,27 @@ function lkmMeetAddFilterUpdate() {
                     newHTML +=  '<input type="radio" name="' + inputName + '" value="' + curCompany.ID + '" />';
                     newHTML +=  '<div class="lkm-exponent-add-exponent-radiobox"></div>';
                     var linkDetail = '';
-                    if (typeof(curCompany.LINK_DETAIL) !== 'undefined') {
-                        linkDetail = '<a href="' + curCompany.LINK_DETAIL + '" target="_blank"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41797 7.04173C5.65059 7.35272 5.94737 7.61004 6.28818 7.79624C6.629 7.98244 7.00587 8.09317 7.39324 8.12091C7.78061 8.14865 8.16941 8.09276 8.53328 7.95703C8.89715 7.82129 9.22757 7.60889 9.50214 7.33423L11.1271 5.70923C11.6205 5.19843 11.8935 4.5143 11.8873 3.80418C11.8811 3.09407 11.5963 2.41478 11.0941 1.91264C10.592 1.41049 9.91271 1.12566 9.2026 1.11949C8.49248 1.11332 7.80835 1.3863 7.29755 1.87965L6.36589 2.8059" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.58271 5.95829C7.35009 5.64731 7.05331 5.38999 6.71249 5.20378C6.37168 5.01758 5.99481 4.90685 5.60744 4.87911C5.22007 4.85137 4.83127 4.90726 4.4674 5.04299C4.10353 5.17873 3.77311 5.39113 3.49854 5.66579L1.87354 7.29079C1.3802 7.80159 1.10721 8.48572 1.11338 9.19584C1.11955 9.90595 1.40439 10.5852 1.90653 11.0874C2.40868 11.5895 3.08796 11.8744 3.79808 11.8805C4.5082 11.8867 5.19233 11.6137 5.70313 11.1204L6.62938 10.1941" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
+                    if (curCompany.LINK_DETAIL !== '') {
+                        linkDetail = '&nbsp;<a href="' + curCompany.LINK_DETAIL + '" target="_blank"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41797 7.04173C5.65059 7.35272 5.94737 7.61004 6.28818 7.79624C6.629 7.98244 7.00587 8.09317 7.39324 8.12091C7.78061 8.14865 8.16941 8.09276 8.53328 7.95703C8.89715 7.82129 9.22757 7.60889 9.50214 7.33423L11.1271 5.70923C11.6205 5.19843 11.8935 4.5143 11.8873 3.80418C11.8811 3.09407 11.5963 2.41478 11.0941 1.91264C10.592 1.41049 9.91271 1.12566 9.2026 1.11949C8.49248 1.11332 7.80835 1.3863 7.29755 1.87965L6.36589 2.8059" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.58271 5.95829C7.35009 5.64731 7.05331 5.38999 6.71249 5.20378C6.37168 5.01758 5.99481 4.90685 5.60744 4.87911C5.22007 4.85137 4.83127 4.90726 4.4674 5.04299C4.10353 5.17873 3.77311 5.39113 3.49854 5.66579L1.87354 7.29079C1.3802 7.80159 1.10721 8.48572 1.11338 9.19584C1.11955 9.90595 1.40439 10.5852 1.90653 11.0874C2.40868 11.5895 3.08796 11.8744 3.79808 11.8805C4.5082 11.8867 5.19233 11.6137 5.70313 11.1204L6.62938 10.1941" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
                     }
                     newHTML +=  '<div class="lkm-exponent-add-exponent-info">' +
                                     '<div class="lkm-exponent-add-exponent-info-inner">' +
                                         '<div class="lkm-exponent-add-exponent-logo"><div class="lkm-exponent-add-exponent-logo-inner"><img src="' + curCompany.LOGOTYPE_SRC + '" alt="" /></div></div>' +
                                         '<div class="lkm-exponent-add-exponent-text">' +
-                                            '<div class="manager-table-participant-name"><span>' + curCompany.NAME + '</span>' + linkDetail + '</div>' +
+                                            '<div class="manager-table-participant-name">' + curCompany.NAME + linkDetail + '</div>' +
                                             '<div class="manager-table-participant-text">';
-                    if (curCompany.BRANDS !== undefined) {
+                    if (curCompany.BRANDS !== '') {
                         newHTML +=              '<span>' + curCompany.BRANDS + '</span>';
                     }
-                    if (curCompany.COUNTRIES !== undefined) {
+                    if (curCompany.COUNTRIES !== '') {
                         newHTML +=              '<div class="manager-table-participant-text-countries">';
                         for (var j = 0; j < curCompany.COUNTRIES.length; j++) {
                             newHTML +=              '<div class="catalogue-item-country-item">';
                             newHTML +=                  '<span class="catalogue-item-country-item-hint"><img src="' + curCompany.COUNTRIES[j].FLAG_SRC + '" alt="" /><span class="catalogue-item-country-item-hint-title">' + curCompany.COUNTRIES[j].NAME + '</span></span>';
                             newHTML +=                  '<span class="catalogue-item-country-item-title">' + curCompany.COUNTRIES[j].NAME + '</span>';
-                            if (curCompany.COUNTRIES[j].REGIONS !== undefined) {
+                            if (curCompany.COUNTRIES[j].REGIONS !== '') {
                                 for (var k = 0; k < curCompany.COUNTRIES[j].REGIONS.length; k++) {
-                                    if (k == 0) {
+                                    if (k != 0) {
                                         newHTML +=      '<span class="catalogue-item-country-sep"></span>';
                                     }
                                     newHTML +=          '<span class="catalogue-item-country-region">' + curCompany.COUNTRIES[j].REGIONS[k].SHORT + '<span class="catalogue-item-country-region-title">' + curCompany.COUNTRIES[j].REGIONS[k].FULL + '</span></span>';
@@ -494,7 +494,7 @@ function lkmMeetAddFilterUpdate() {
                                 '</div>';
 
                     newHTML +=  '<div class="lkm-exponent-add-exponent-source"><div class="meet-add-company-title-mobile">Сырье</div>';
-                    if (curCompany.SOURCE !== undefined) {
+                    if (curCompany.SOURCE !== '') {
                         for (var j = 0; j < curCompany.SOURCE.length; j++) {
                             newHTML += '<span class="catalogue-item-country-item-hint">' + curCompany.SOURCE[j].LETTER + '<span class="catalogue-item-country-item-hint-title">' + curCompany.SOURCE[j].NAME + '</span></span>';
                         }
@@ -502,7 +502,7 @@ function lkmMeetAddFilterUpdate() {
                     newHTML +=  '</div>';
 
                     newHTML +=  '<div class="lkm-exponent-add-exponent-category"><div class="meet-add-company-title-mobile">Категории</div>';
-                    if (curCompany.CATEGORIES !== undefined) {
+                    if (curCompany.CATEGORIES !== '') {
                         for (var j = 0; j < curCompany.CATEGORIES.length; j++) {
                             newHTML += '<span class="catalogue-item-country-item-hint"><img src="' + curCompany.CATEGORIES[j].ICON_SRC + '" alt="" /><span class="catalogue-item-country-item-hint-title">' + curCompany.CATEGORIES[j].NAME + '</span></span>';
                         }
@@ -601,13 +601,13 @@ function lkmMeetAddFilterUpdateVisitor() {
                     newHTML +=  '<input type="radio" name="' + inputName + '" value="' + curCompany.ID + '" />';
                     newHTML +=  '<div class="lkm-visitor-add-visitor-radiobox"></div>';
                     var linkDetail = ''; 
-                    if (typeof(curCompany.LINK_DETAIL) !== 'undefined') {
-                        linkDetail = '<a href="' + curCompany.LINK_DETAIL + '" target="_blank"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41797 7.04173C5.65059 7.35272 5.94737 7.61004 6.28818 7.79624C6.629 7.98244 7.00587 8.09317 7.39324 8.12091C7.78061 8.14865 8.16941 8.09276 8.53328 7.95703C8.89715 7.82129 9.22757 7.60889 9.50214 7.33423L11.1271 5.70923C11.6205 5.19843 11.8935 4.5143 11.8873 3.80418C11.8811 3.09407 11.5963 2.41478 11.0941 1.91264C10.592 1.41049 9.91271 1.12566 9.2026 1.11949C8.49248 1.11332 7.80835 1.3863 7.29755 1.87965L6.36589 2.8059" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.58271 5.95829C7.35009 5.64731 7.05331 5.38999 6.71249 5.20378C6.37168 5.01758 5.99481 4.90685 5.60744 4.87911C5.22007 4.85137 4.83127 4.90726 4.4674 5.04299C4.10353 5.17873 3.77311 5.39113 3.49854 5.66579L1.87354 7.29079C1.3802 7.80159 1.10721 8.48572 1.11338 9.19584C1.11955 9.90595 1.40439 10.5852 1.90653 11.0874C2.40868 11.5895 3.08796 11.8744 3.79808 11.8805C4.5082 11.8867 5.19233 11.6137 5.70313 11.1204L6.62938 10.1941" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
+                    if (curCompany.LINK_DETAIL !== '') {
+                        linkDetail = '&nbsp;<a href="' + curCompany.LINK_DETAIL + '" target="_blank"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.41797 7.04173C5.65059 7.35272 5.94737 7.61004 6.28818 7.79624C6.629 7.98244 7.00587 8.09317 7.39324 8.12091C7.78061 8.14865 8.16941 8.09276 8.53328 7.95703C8.89715 7.82129 9.22757 7.60889 9.50214 7.33423L11.1271 5.70923C11.6205 5.19843 11.8935 4.5143 11.8873 3.80418C11.8811 3.09407 11.5963 2.41478 11.0941 1.91264C10.592 1.41049 9.91271 1.12566 9.2026 1.11949C8.49248 1.11332 7.80835 1.3863 7.29755 1.87965L6.36589 2.8059" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.58271 5.95829C7.35009 5.64731 7.05331 5.38999 6.71249 5.20378C6.37168 5.01758 5.99481 4.90685 5.60744 4.87911C5.22007 4.85137 4.83127 4.90726 4.4674 5.04299C4.10353 5.17873 3.77311 5.39113 3.49854 5.66579L1.87354 7.29079C1.3802 7.80159 1.10721 8.48572 1.11338 9.19584C1.11955 9.90595 1.40439 10.5852 1.90653 11.0874C2.40868 11.5895 3.08796 11.8744 3.79808 11.8805C4.5082 11.8867 5.19233 11.6137 5.70313 11.1204L6.62938 10.1941" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
                     }
                     newHTML +=  '<div class="lkm-visitor-add-visitor-info manager-table-cell-company-type-' + curCompany.TYPE + '">' +
-                                    '<div class="manager-table-company-name"><span>' + curCompany.NAME + '</span>' + linkDetail + '</div>' +
+                                    '<div class="manager-table-company-name">' + curCompany.NAME + linkDetail + '</div>' +
                                     '<div class="manager-table-company-text">';
-                    if (curCompany.BRANDS !== undefined) {
+                    if (curCompany.BRANDS !== '') {
                         newHTML +=      '<span>' + curCompany.BRANDS + '</span>';
                     }
                     newHTML +=      '</div>' +

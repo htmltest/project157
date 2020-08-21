@@ -283,7 +283,7 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-exponent-add-company-count {float:right; font-size:14px; line-height:21px}
 .lkm-exponent-add-company-count strong {font-weight:600}
 
-.lkm-exponent-add-list {display:table; width:100%; margin:25px 0 0 0; border-collapse:collapse}
+.lkm-exponent-add-list {display:table; width:100%; margin:25px 0 0 0; border-collapse:collapse; table-layout:fixed}
 .lkm-exponent-add-list-headers {display:table-row}
 .lkm-exponent-add-list-header {display:table-cell; vertical-align:top; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase; color:#81a2b0; padding:0 0 8px 0}
 .lkm-exponent-add-list-header:nth-child(1) {width:37px}
@@ -305,19 +305,24 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-exponent-add-exponent-logo-inner {width:73px; line-height:0}
 .lkm-exponent-add-exponent-logo-inner img {max-height:45px}
 .lkm-exponent-add-exponent-text {display:table-cell; vertical-align:middle; padding:0 30px}
+.lkm-exponent-add-exponent-text .manager-table-participant-text span {margin:0 5px 0 0}
+.lkm-exponent-add-exponent-text .manager-table-participant-text > span {margin:0 12px 0 0}
+.lkm-exponent-add-exponent-text .manager-table-participant-text .catalogue-item-country-item-title+.catalogue-item-country-region {margin:0 5px 0 -5px}
+.lkm-exponent-add-exponent-text .catalogue-item-country-region {font-size:12px}
 .lkm-exponent-add-exponent-source {display:table-cell; vertical-align:middle; width:65px; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative; font-size:14px; line-height:21px}
 .lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-source {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
-.lkm-exponent-add-exponent-category {display:table-cell; vertical-align:middle; width:155px; padding:15px 20px 15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
+.lkm-exponent-add-exponent-category {display:table-cell; vertical-align:middle; width:155px; padding:15px 0 15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
 .lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-category {background:rgba(0, 140, 201, 0.04)}
 .lkm-exponent-add-exponent:hover .lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source+.lkm-exponent-add-exponent-category::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent input:checked+.lkm-exponent-add-exponent-radiobox+.lkm-exponent-add-exponent-info+.lkm-exponent-add-exponent-source+.lkm-exponent-add-exponent-category::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-exponent-add-exponent-category > span {margin:4px 8px 4px 0}
-.lkm-exponent-add-exponent-category img {height:18px}
+.lkm-exponent-add-exponent-category img {height:14px}
 .lkm-exponent-add-exponent .manager-table-participant-text-countries {white-space:nowrap}
 .lkm-exponent-add-exponent .manager-table-participant-text-countries img {height:15px}
 .lkm-exponent-add-exponent .manager-table-participant-text .catalogue-item-country-item:first-child {margin:0}
+.lkm-exponent-add-exponent .manager-table-participant-name span {max-width:none}
 
 .meet-card-data-item-change {display:none; margin:10px 0 0 0; font-size:14px; line-height:21px; text-align:right}
 .meet-card-data-item-change a {color:#272727; border-bottom:1px dashed #bababa; text-decoration:none}
@@ -351,7 +356,7 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-visitor-add-company-count {float:right; font-size:14px; line-height:21px}
 .lkm-visitor-add-company-count strong {font-weight:600}
 
-.lkm-visitor-add-list {display:table; width:100%; margin:25px 0 0 0; border-collapse:collapse}
+.lkm-visitor-add-list {display:table; width:100%; margin:25px 0 0 0; border-collapse:collapse; table-layout:fixed}
 .lkm-visitor-add-list-headers {display:table-row}
 .lkm-visitor-add-list-header {display:table-cell; vertical-align:top; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.03em; text-transform:uppercase; color:#81a2b0; padding:0 0 8px 30px}
 .lkm-visitor-add-list-header:first-child {padding-left:0; width:37px}
@@ -363,7 +368,7 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-radiobox::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox::before {content:""; display:block; width:19px; height:19px; background:url(../images/meet-add-company-radiobox.svg) no-repeat}
-.lkm-visitor-add-visitor-info {display:table-cell; vertical-align:top; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative; white-space:nowrap}
+.lkm-visitor-add-visitor-info {display:table-cell; vertical-align:top; padding:15px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-info {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
@@ -371,7 +376,7 @@ h1+.meet-card-data {margin-top:48px}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-city {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
-.lkm-visitor-add-visitor-delegate {display:table-cell; vertical-align:top; padding:15px 0 15px 30px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
+.lkm-visitor-add-visitor-delegate {display:table-cell; vertical-align:top; padding:15px 20px 15px 30px; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8; position:relative}
 .lkm-visitor-add-visitor:hover .lkm-visitor-add-visitor-delegate {background:rgba(0, 140, 201, 0.04)}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city+.lkm-visitor-add-visitor-delegate::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
 .lkm-visitor-add-visitor input:checked+.lkm-visitor-add-visitor-radiobox+.lkm-visitor-add-visitor-info+.lkm-visitor-add-visitor-city+.lkm-visitor-add-visitor-delegate+.lkm-visitor-add-visitor-delegate::after {content:""; display:block; position:absolute; left:0; top:-2px; right:0; bottom:-2px; border-top:2px solid #008cc9; border-bottom:2px solid #008cc9; pointer-events:none}
